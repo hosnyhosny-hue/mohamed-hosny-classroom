@@ -1,0 +1,407 @@
+{
+  "version": 1,
+  "updatedAt": "2026-09-24",
+  "hero": {
+    "image": "https://picsum.photos/seed/kcdclassroom/900/700",
+    "en": {
+      "title": "Every day in our classroom tells a <em>new learning story</em>.",
+      "lede": "A window into our classroom — sharing learning moments, student achievements, ideas, projects and our everyday journey at King's College Doha."
+    },
+    "ar": {
+      "title": "كل يوم في صفنا قصة تعلّم <em>جديدة</em>.",
+      "lede": "مساحة أشارك من خلالها لحظات التعلّم، إنجازات طلابي، أفكارنا، مشروعاتنا ورحلتنا اليومية داخل كنجز كولج الدوحة."
+    }
+  },
+  "titles": {
+    "en": {
+      "week_title": "This Week in Our Classroom",
+      "journal_title": "Classroom Journal",
+      "moments_title": "Classroom Moments",
+      "learning_title": "What Are We Learning Now?",
+      "showcase_title": "Student Learning Showcase",
+      "journey_title": "Our Learning Journey",
+      "values_title": "King's Values in Action",
+      "pulse_title": "Classroom Pulse",
+      "word_title": "Arabic Word of the Week",
+      "voice_title": "Student Voice",
+      "refl_title": "Weekly Reflection",
+      "proj_title": "Our Projects",
+      "cel_title": "Celebrating Progress",
+      "cul_title": "Where Arabic Meets Qatar",
+      "lib_title": "Classroom Library",
+      "fam_title": "Family Window",
+      "about_title": "My Teaching Story"
+    },
+    "ar": {
+      "week_title": "هذا الأسبوع في صفنا",
+      "journal_title": "يوميات الصف",
+      "moments_title": "لحظات من الصف",
+      "learning_title": "ماذا نتعلم الآن؟",
+      "showcase_title": "إبداعات طلابنا",
+      "journey_title": "رحلة التعلّم",
+      "values_title": "قيم كنجز في صفنا",
+      "pulse_title": "نبض الصف",
+      "word_title": "كلمة الأسبوع",
+      "voice_title": "صوت الطالب",
+      "refl_title": "وقفة الأسبوع",
+      "proj_title": "مشروعاتنا",
+      "cel_title": "نحتفل بالتقدم",
+      "cul_title": "حيث تلتقي العربية بقطر",
+      "lib_title": "مكتبة الصف",
+      "fam_title": "نافذة الأسرة",
+      "about_title": "قصتي مع التعليم"
+    }
+  },
+  "week": [
+    {
+      "image": "https://picsum.photos/seed/kcdstory1/700/480",
+      "en": {
+        "title": "When Our Vocabulary Came Alive",
+        "text": "Pupils turned our unit word bank into a living dictionary, acting out each word for their peers to guess — laughter included."
+      },
+      "ar": {
+        "title": "حين استيقظت مفرداتنا",
+        "text": "حوّل الطلاب بنك كلمات وحدتنا إلى قاموس حي، يمثّلون كل كلمة ليتخمّنها زملاؤهم — والضحك مشارك."
+      }
+    },
+    {
+      "image": "https://picsum.photos/seed/kcdstory2/700/480",
+      "en": {
+        "title": "A Morning of Reflection and Questions",
+        "text": "We explored the values of honesty through story circles, and the questions pupils asked kept us talking long after the bell."
+      },
+      "ar": {
+        "title": "صباح من التأمل والأسئلة",
+        "text": "تأملنا قيمة الصدق عبر دوائر القصص، واستمرت أسئلة الطلاب في الحوار طويلًا بعد جرس الحصة."
+      }
+    },
+    {
+      "image": "https://picsum.photos/seed/kcdstory3/700/480",
+      "en": {
+        "title": "Mapping Our City, Past and Present",
+        "text": "Comparing old photographs of Doha with the skyline outside our window sparked the best discussion of the term so far."
+      },
+      "ar": {
+        "title": "نرسم مدينتنا بين الماضي والحاضر",
+        "text": "مقارنة صور الدوحة القديمة بأفق النوافذ أشعلت أفضل نقاش في الفصل حتى الآن."
+      }
+    }
+  ],
+  "journal": [
+    {
+      "f": "arabic writing",
+      "yg": "Y5",
+      "cls": "5B",
+      "subj": "العربية",
+      "seed": "j1",
+      "image": "https://picsum.photos/seed/kcdj1/700/480",
+      "en": {
+        "t": "The Living Dictionary",
+        "p": "We turned our word bank into a performance — every vocabulary word acted, sketched and defined by pupils themselves."
+      },
+      "ar": {
+        "t": "القاموس الحي",
+        "p": "حوّلنا بنك الكلمات إلى أداء — كل كلمة تُمثَّل وتُرسَم وتُعرَّف بأيدي الطلاب أنفسهم."
+      }
+    },
+    {
+      "f": "qatar culture",
+      "yg": "Y4",
+      "cls": "4C",
+      "subj": "Qatar History",
+      "seed": "j2",
+      "image": "https://picsum.photos/seed/kcdj2/700/480",
+      "en": {
+        "t": "Old Doha, New Eyes",
+        "p": "Archive photographs met modern skylines as pupils built past-and-present maps of their own neighbourhoods."
+      },
+      "ar": {
+        "t": "الدوحة القديمة بعيون جديدة",
+        "p": "التقت صور الأرشيف بأفق اليوم حين بنى الطلاب خرائط لأحيائهم بين الماضي والحاضر."
+      }
+    },
+    {
+      "f": "reading",
+      "yg": "Y6",
+      "cls": "6A",
+      "subj": "Reading",
+      "seed": "j3",
+      "image": "https://picsum.photos/seed/kcdj3/700/480",
+      "en": {
+        "t": "A Chapter a Day, a World a Week",
+        "p": "Our silent reading ritual grew into book talks — pupils now pitch their novels to the class in sixty seconds."
+      },
+      "ar": {
+        "t": "فصل كل يوم، وعالم كل أسبوع",
+        "p": "نما طقس القراءة الصامتة إلى محادثات كتب — يعرض الطلاب رواياتهم على الصف في ستين ثانية."
+      }
+    },
+    {
+      "f": "islamic",
+      "yg": "Y5",
+      "cls": "5A",
+      "subj": "Islamic Studies",
+      "seed": "j4",
+      "image": "https://picsum.photos/seed/kcdj4/700/480",
+      "en": {
+        "t": "Stories of Honesty",
+        "p": "Story circles on truthfulness produced questions so thoughtful we dedicated a second lesson just to them."
+      },
+      "ar": {
+        "t": "قصص الصدق",
+        "p": "دوائر قصص عن الصدق أنتجت أسئلة عميقة جعلتنا نخصص درسًا ثانيًا لها وحدها."
+      }
+    },
+    {
+      "f": "speaking projects",
+      "yg": "Y7",
+      "cls": "7B",
+      "subj": "Arabic",
+      "seed": "j5",
+      "image": "https://picsum.photos/seed/kcdj5/700/480",
+      "en": {
+        "t": "Sixty Seconds of Confidence",
+        "p": "Pupils rehearsed, recorded and re-recorded short Arabic talks — the second take was always braver than the first."
+      },
+      "ar": {
+        "t": "ستون ثانية من الثقة",
+        "p": "تدرب الطلاب وسجلوا وأعادوا تسجيل حديث عربي قصير — كانت المحاولة الثانية أشجع دائمًا."
+      }
+    },
+    {
+      "f": "writing celebrations",
+      "yg": "Y6",
+      "cls": "6C",
+      "subj": "Writing",
+      "seed": "j6",
+      "image": "https://picsum.photos/seed/kcdj6/700/480",
+      "en": {
+        "t": "Poetry Under the Corridor Lights",
+        "p": "Our term celebration featured pupils reading original Arabic poetry to families in the corridor gallery."
+      },
+      "ar": {
+        "t": "شعر تحت أضواء الممر",
+        "p": "تضمنت احتفالية الفصل قراءات للشعر العربي الأصلي بأصوات الطلاب أمام الأسر في معرض الممر."
+      }
+    }
+  ],
+  "moments": [
+    {
+      "seed": "m1",
+      "image": "https://picsum.photos/seed/kcdm1/600/480",
+      "en": {
+        "t": "Measuring the Medina",
+        "p": "Pupils pace out a scale model of an old souq — learning ratio by walking through it."
+      },
+      "ar": {
+        "t": "نقيس المدينة القديمة",
+        "p": "يقيس الطلاب مجسمًا مصغرًا للسوق القديم — يتعلمون النِّسَب بالمشي داخله."
+      }
+    },
+    {
+      "seed": "m2",
+      "image": "https://picsum.photos/seed/kcdm2/600/480",
+      "en": {
+        "t": "The Red Pen Roundtable",
+        "p": "Peer feedback in action: pupils trade drafts and learn to give kind, specific advice."
+      },
+      "ar": {
+        "t": "طاولة القلم الأحمر",
+        "p": "تقييم الأقران عمليًا: يتبادل الطلاب مسوداتهم ويتعلمون نصائح لطيفة ومحددة."
+      }
+    },
+    {
+      "seed": "m3",
+      "image": "https://picsum.photos/seed/kcdm3/600/480",
+      "en": {
+        "t": "Calligraphy in Concentration",
+        "p": "Ink, breath, patience — the quietest and most focused ten minutes of our week."
+      },
+      "ar": {
+        "t": "خط بتركيز",
+        "p": "حبر ونفس وصبر — أكثر عشر دقائق هدوءًا وتركيزًا في أسبوعنا."
+      }
+    },
+    {
+      "seed": "m4",
+      "image": "https://picsum.photos/seed/kcdm4/600/480",
+      "en": {
+        "t": "Question Storm",
+        "p": "A single provocation generated forty pupil questions — we pinned them all to the wonder wall."
+      },
+      "ar": {
+        "t": "عاصفة الأسئلة",
+        "p": "سؤال محفّز واحد أنشأ أربعين سؤالًا من الطلاب — علّقناها كلها على جدار الفضول."
+      }
+    },
+    {
+      "seed": "m5",
+      "image": "https://picsum.photos/seed/kcdm5/600/480",
+      "en": {
+        "t": "Reading Buddies",
+        "p": "Year 6 readers pair with Year 3 — both sides grow, and nobody wants to stop."
+      },
+      "ar": {
+        "t": "رفيق القراءة",
+        "p": "قرّاء الصف السادس مع الصف الثالث — يكبر الطرفان، ولا يريد أحد التوقف."
+      }
+    },
+    {
+      "seed": "m6",
+      "image": "https://picsum.photos/seed/kcdm6/600/480",
+      "en": {
+        "t": "Doha Then and Now",
+        "p": "Comparing archive photos with today's skyline turned history into a live debate."
+      },
+      "ar": {
+        "t": "الدوحة زمان والآن",
+        "p": "مقارنة صور الأرشيف بأفق اليوم حوّلت التاريخ إلى نقاش حي."
+      }
+    }
+  ],
+  "showcase": [
+    {
+      "cat_en": "Writing",
+      "cat_ar": "كتابة",
+      "seed": "s1",
+      "image": "https://picsum.photos/seed/kcds1/500/440",
+      "en": {
+        "t": "A Letter to My City",
+        "m": "Year 5 · bilingual letter project"
+      },
+      "ar": {
+        "t": "رسالة إلى مدينتي",
+        "m": "الصف الخامس · مشروع الرسائل ثنائية اللغة"
+      }
+    },
+    {
+      "cat_en": "Projects",
+      "cat_ar": "مشروعات",
+      "seed": "s2",
+      "image": "https://picsum.photos/seed/kcds2/500/440",
+      "en": {
+        "t": "Souq in a Shoebox",
+        "m": "Year 4 · miniature heritage souq"
+      },
+      "ar": {
+        "t": "سوق في علبة أحذية",
+        "m": "الصف الرابع · نموذج تراثي مصغّر"
+      }
+    },
+    {
+      "cat_en": "Creative Work",
+      "cat_ar": "عمل إبداعي",
+      "seed": "s3",
+      "image": "https://picsum.photos/seed/kcds3/500/440",
+      "en": {
+        "t": "Calligraphy: My Name in Thuluth",
+        "m": "Year 6 · first ink commission"
+      },
+      "ar": {
+        "t": "خطّي: اسمي بالثلث",
+        "m": "الصف السادس · أول عمل بالحبر"
+      }
+    },
+    {
+      "cat_en": "Speaking",
+      "cat_ar": "تحدث",
+      "seed": "s4",
+      "image": "https://picsum.photos/seed/kcds4/500/440",
+      "en": {
+        "t": "Sixty-Second Book Talk",
+        "m": "Year 6 · reading circle finale"
+      },
+      "ar": {
+        "t": "عرض كتاب في ستين ثانية",
+        "m": "الصف السادس · ختام دائرة القراءة"
+      }
+    },
+    {
+      "cat_en": "Research",
+      "cat_ar": "بحث",
+      "seed": "s5",
+      "image": "https://picsum.photos/seed/kcds5/500/440",
+      "en": {
+        "t": "My Grandmother's Doha",
+        "m": "Year 5 · oral history research"
+      },
+      "ar": {
+        "t": "دوحة جدتي",
+        "m": "الصف الخامس · بحث تاريخ شفهي"
+      }
+    },
+    {
+      "cat_en": "Culture",
+      "cat_ar": "ثقافة",
+      "seed": "s6",
+      "image": "https://picsum.photos/seed/kcds6/500/440",
+      "en": {
+        "t": "National Day Poster, Arabic & English",
+        "m": "Year 4 · cross-cultural design"
+      },
+      "ar": {
+        "t": "ملصق اليوم الوطني بالعربية والإنجليزية",
+        "m": "الصف الرابع · تصميم بين الثقافات"
+      }
+    },
+    {
+      "cat_en": "Reading",
+      "cat_ar": "قراءة",
+      "seed": "s7",
+      "image": "https://picsum.photos/seed/kcds7/500/440",
+      "en": {
+        "t": "Reading Passport: 25 Stamps",
+        "m": "Year 3 · genre exploration"
+      },
+      "ar": {
+        "t": "جواز قراءة: ٢٥ ختمة",
+        "m": "الصف الثالث · استكشاف الأنواع"
+      }
+    },
+    {
+      "cat_en": "Presentations",
+      "cat_ar": "عروض",
+      "seed": "s8",
+      "image": "https://picsum.photos/seed/kcds8/500/440",
+      "en": {
+        "t": "Inventor of the Islamic Golden Age",
+        "m": "Year 7 · research presentation"
+      },
+      "ar": {
+        "t": "مخترع من العصر الذهبي الإسلامي",
+        "m": "الصف السابع · عرض بحثي"
+      }
+    }
+  ],
+  "images": {
+    "projectBanner": "https://picsum.photos/seed/kcdproj/1200/460",
+    "culture": "https://picsum.photos/seed/kcdculture/800/600",
+    "about": "https://picsum.photos/seed/kcdteacher/700/900"
+  },
+  "about": {
+    "en": {
+      "paragraph": "I am the Head of Arabic & Islamic at King's College Doha, teaching across the primary and secondary phases. My classroom is built on a simple conviction: language is identity, and identity deserves to be celebrated daily.",
+      "quote": "“I believe the best classrooms are places where pupils feel safe to try, confident to question and excited to discover.”"
+    },
+    "ar": {
+      "paragraph": "أنا رئيس قسم العربية والإسلامية في كنجز كولج الدوحة، أدرّس في المرحلتين الابتدائية والإعدادية. صفي مبني على قناعة بسيطة: اللغة هي الهوية، والهوية تستحق الاحتفاء يوميًا.",
+      "quote": "«أؤمن أن أفضل الصفوف هي التي يشعر فيها الطالب بالأمان ليحاول، وبالثقة ليسأل، وبالحماس ليكتشف.»"
+    }
+  },
+  "project": {
+    "en": {
+      "title": "“Letters to Old Doha”",
+      "question": "What would we write to the Doha of fifty years ago — and what would it write back?",
+      "process": "Year 5 pupils interviewed family members about old Doha, studied archive photographs, then drafted bilingual letters in Arabic and English before designing aged-paper editions with calligraphic borders.",
+      "studentVoice": "“I learned that my grandfather's Doha had more sand than glass. Writing to him made history feel like a conversation, not a lesson.” — Year 5 pupil",
+      "reflection": "The bilingual letters became the strongest writing assessment of the term — pupils chose which language carried their emotion, then translated the feeling, not just the words."
+    },
+    "ar": {
+      "title": "«رسائل إلى الدوحة القديمة»",
+      "question": "ماذا سنكتب إلى دوحة قبل خمسين عامًا — وماذا ستكتب إلينا؟",
+      "process": "قابَل طلاب الصف الخامس أفراد عائلاتهم عن الدوحة القديمة، ودرسوا صور الأرشيف، ثم كتبوا مسودات رسائل ثنائية اللغة قبل تصميم طبعات بورق معتّق وحدود خطية.",
+      "studentVoice": "«تعلمت أن دوحة جدي كانت فيها رمال أكثر من زجاج. كتابة الرسالة جعلت التاريخ محادثة، لا درسًا.» — طالب من الصف الخامس",
+      "reflection": "أصبحت الرسائل ثنائية اللغة أقوى تقييم كتابي في الفصل — اختار الطلاب أي لغة تحمل شعورهم، ثم ترجموا الإحساس لا الكلمات فقط."
+    }
+  }
+}
