@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>لوحة تحكم الموقع | Mohamed Hosny</title>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#172033;--muted:#6e778a;--bg:#f4f5f7;--card:#fff;--line:#e2e5ea;--navy:#1f3a5f;--gold:#b8955a;--ok:#24765f;--bad:#a33a42}
+*{box-sizing:border-box}body{margin:0;font-family:"IBM Plex Sans Arabic","IBM Plex Sans",sans-serif;background:var(--bg);color:var(--ink)}
+.shell{display:grid;grid-template-columns:260px 1fr;min-height:100vh}.side{background:#142844;color:#fff;padding:26px 18px;position:sticky;top:0;height:100vh}.brand{font-size:1.2rem;font-weight:700;margin-bottom:5px}.brand small{display:block;font-size:.75rem;font-weight:400;opacity:.65;margin-top:5px}
+.nav{display:grid;gap:7px;margin-top:28px}.nav button{font:inherit;text-align:right;border:0;background:transparent;color:rgba(255,255,255,.78);padding:11px 13px;border-radius:11px;cursor:pointer}.nav button.active,.nav button:hover{background:rgba(255,255,255,.1);color:#fff}
+.main{padding:32px;max-width:1220px;width:100%;margin:auto}.top{display:flex;justify-content:space-between;gap:20px;align-items:center;margin-bottom:24px;flex-wrap:wrap}.top h1{margin:0;font-size:1.8rem}.top p{margin:5px 0 0;color:var(--muted)}
+.actions{display:flex;gap:9px;flex-wrap:wrap}.btn{font:inherit;border:1px solid var(--line);background:#fff;padding:10px 17px;border-radius:11px;cursor:pointer;font-weight:600}.btn.primary{background:var(--navy);color:#fff;border-color:var(--navy)}.btn.gold{background:var(--gold);color:#fff;border-color:var(--gold)}.btn.danger{color:var(--bad)}
+.status{display:inline-flex;gap:8px;align-items:center;font-size:.82rem;padding:7px 11px;border-radius:99px;background:#fff;border:1px solid var(--line)}.dot{width:8px;height:8px;border-radius:50%;background:#aaa}.dot.ok{background:var(--ok)}
+.panel{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:22px;margin-bottom:18px}.panel h2{margin:0 0 6px;font-size:1.2rem}.hint{color:var(--muted);font-size:.84rem;margin-bottom:18px}.grid2{display:grid;grid-template-columns:1fr 1fr;gap:15px}.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:15px}
+.field{display:grid;gap:6px}.field label{font-size:.8rem;font-weight:700;color:#46516a}.field input,.field textarea{width:100%;font:inherit;border:1px solid var(--line);border-radius:10px;padding:10px 12px;background:#fff;color:var(--ink)}.field textarea{min-height:100px;resize:vertical}.en{direction:ltr;text-align:left;font-family:"IBM Plex Sans",sans-serif}
+.item{border:1px solid var(--line);border-radius:15px;padding:17px;margin:13px 0;background:#fcfcfd}.item-head{display:flex;justify-content:space-between;align-items:center;gap:10px;margin-bottom:13px}.item-head b{font-size:.94rem}
+.imgrow{display:grid;grid-template-columns:120px 1fr;gap:14px;align-items:center}.thumb{width:120px;height:82px;object-fit:cover;border-radius:11px;border:1px solid var(--line);background:#eee}
+.upload{display:flex;gap:8px;align-items:center;flex-wrap:wrap}.upload input[type=file]{max-width:250px}
+.section{display:none}.section.active{display:block}.connect{background:#fff8ea;border-color:#ead8ae}.tokenrow{display:grid;grid-template-columns:1fr auto;gap:9px}.notice{padding:11px 13px;border-radius:10px;font-size:.83rem;margin-top:12px;display:none}.notice.show{display:block}.notice.ok{background:#e9f5f0;color:#1d6b55}.notice.bad{background:#faecee;color:#92313a}
+.stickybar{position:sticky;bottom:14px;display:flex;justify-content:flex-end;gap:9px;padding:10px;background:rgba(244,245,247,.92);backdrop-filter:blur(10px);border-radius:15px}
+@media(max-width:900px){.shell{grid-template-columns:1fr}.side{position:relative;height:auto}.nav{grid-template-columns:repeat(2,1fr)}.main{padding:20px}.grid2,.grid3{grid-template-columns:1fr}.imgrow{grid-template-columns:1fr}.thumb{width:100%;height:170px}}
+</style>
+</head>
+<body>
+<div class="shell">
+<aside class="side">
+  <div class="brand">لوحة تحكم الموقع<small>Mohamed Hosny · King's College Doha</small></div>
+  <div class="nav" id="nav">
+    <button class="active" data-tab="home">الرئيسية</button>
+    <button data-tab="titles">العناوين</button>
+    <button data-tab="week">هذا الأسبوع</button>
+    <button data-tab="journal">المقالات</button>
+    <button data-tab="gallery">الصور والمعرض</button>
+    <button data-tab="about">عن المعلم والمشروع</button>
+  </div>
+</aside>
+<main class="main">
+  <div class="top">
+    <div><h1>إدارة المحتوى</h1><p>عدّل النصوص والصور ثم انشرها مباشرة إلى الموقع.</p></div>
+    <div class="actions">
+      <span class="status"><span class="dot" id="statusDot"></span><span id="statusText">غير متصل بـ GitHub</span></span>
+      <a class="btn" href="./" target="_blank">فتح الموقع ↗</a>
+    </div>
+  </div>
+
+  <div class="panel connect" id="connectPanel">
+    <h2>اتصال GitHub</h2>
+    <div class="hint">استخدم Fine-grained token بصلاحية Contents: Read and write لهذا المستودع فقط. الرمز يُحفظ في جلسة المتصفح فقط ولا يُكتب داخل الموقع.</div>
+    <div class="tokenrow">
+      <input id="token" type="password" placeholder="github_pat_..." style="font:inherit;border:1px solid var(--line);border-radius:10px;padding:11px 12px;direction:ltr">
+      <button class="btn primary" id="connectBtn">اتصال وتحميل المحتوى</button>
+    </div>
+    <div class="notice" id="notice"></div>
+  </div>
+
+  <section class="section active" id="tab-home"></section>
+  <section class="section" id="tab-titles"></section>
+  <section class="section" id="tab-week"></section>
+  <section class="section" id="tab-journal"></section>
+  <section class="section" id="tab-gallery"></section>
+  <section class="section" id="tab-about"></section>
+
+  <div class="stickybar">
+    <button class="btn" id="draftBtn">حفظ مسودة على هذا الجهاز</button>
+    <button class="btn gold" id="publishBtn">نشر التعديلات</button>
+  </div>
+</main>
+</div>
+
+<script>
+const OWNER="hosnyhosny-hue", REPO="mohamed-hosny-classroom", BRANCH="main", CONTENT_PATH="site-content.json";
+let TOKEN=sessionStorage.getItem("mh_admin_token")||"", DATA=null, CONTENT_SHA=null;
+const tokenEl=document.getElementById("token"); tokenEl.value=TOKEN;
+
+const esc=s=>String(s??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+function getByPath(obj,path){return path.split(".").reduce((a,k)=>a==null?undefined:a[k],obj)}
+function setByPath(obj,path,val){const p=path.split(".");let cur=obj;for(let i=0;i<p.length-1;i++){cur=cur[p[i]]}cur[p[p.length-1]]=val}
+function field(label,path,opts={}){
+  const v=getByPath(DATA,path)??"", cls=opts.en?"en":"";
+  return '<div class="field"><label>'+esc(label)+'</label>'+(opts.area?
+    '<textarea class="'+cls+'" data-path="'+esc(path)+'">'+esc(v)+'</textarea>':
+    '<input class="'+cls+'" data-path="'+esc(path)+'" value="'+esc(v)+'">')+'</div>';
+}
+function imageField(label,path){
+  const v=getByPath(DATA,path)||"";
+  return '<div class="field"><label>'+esc(label)+'</label><div class="imgrow"><img class="thumb" src="'+esc(v)+'" onerror="this.style.opacity=.25"><div><input class="en" data-path="'+esc(path)+'" value="'+esc(v)+'" style="width:100%;font:inherit;border:1px solid var(--line);border-radius:10px;padding:10px 12px"><div class="upload" style="margin-top:8px"><input type="file" accept="image/*" data-upload-path="'+esc(path)+'"><span style="font-size:.77rem;color:var(--muted)">اختر صورة لرفعها إلى GitHub تلقائيًا</span></div></div></div></div>';
+}
+function cardTitle(n){return '<div class="item-head"><b>'+n+'</b></div>'}
+function render(){
+  if(!DATA)return;
+  document.getElementById("tab-home").innerHTML=
+    '<div class="panel"><h2>واجهة الموقع</h2><div class="hint">العنوان الرئيسي والوصف والصورة الأولى.</div>'+
+    imageField("الصورة الرئيسية","hero.image")+
+    '<div class="grid2" style="margin-top:15px">'+field("العنوان العربي","hero.ar.title",{area:true})+field("English title","hero.en.title",{area:true,en:true})+'</div>'+
+    '<div class="grid2" style="margin-top:15px">'+field("الوصف العربي","hero.ar.lede",{area:true})+field("English introduction","hero.en.lede",{area:true,en:true})+'</div></div>';
+
+  const titleLabels={
+    week_title:"هذا الأسبوع",journal_title:"يوميات الصف",moments_title:"لحظات من الصف",learning_title:"ماذا نتعلم الآن؟",
+    showcase_title:"إبداعات طلابنا",journey_title:"رحلة التعلّم",values_title:"قيم كنجز",pulse_title:"نبض الصف",
+    word_title:"كلمة الأسبوع",voice_title:"صوت الطالب",refl_title:"وقفة الأسبوع",proj_title:"مشروعاتنا",
+    cel_title:"نحتفل بالتقدم",cul_title:"الثقافة",lib_title:"مكتبة الصف",fam_title:"نافذة الأسرة",about_title:"عن المعلم"
+  };
+  document.getElementById("tab-titles").innerHTML='<div class="panel"><h2>عناوين الأقسام</h2><div class="hint">يمكن تعديل كل عنوان بالعربية والإنجليزية.</div>'+
+    Object.entries(titleLabels).map(([k,l])=>'<div class="item">'+cardTitle(l)+'<div class="grid2">'+field("العربية","titles.ar."+k)+field("English","titles.en."+k,{en:true})+'</div></div>').join("")+'</div>';
+
+  document.getElementById("tab-week").innerHTML='<div class="panel"><h2>هذا الأسبوع في صفنا</h2><div class="hint">البطاقات الثلاث الظاهرة مباشرة أسفل الواجهة الرئيسية.</div>'+
+    DATA.week.map((w,i)=>'<div class="item">'+cardTitle("القصة "+(i+1))+imageField("الصورة","week."+i+".image")+
+      '<div class="grid2" style="margin-top:14px">'+field("العنوان العربي","week."+i+".ar.title")+field("English title","week."+i+".en.title",{en:true})+'</div>'+
+      '<div class="grid2" style="margin-top:14px">'+field("النص العربي","week."+i+".ar.text",{area:true})+field("English text","week."+i+".en.text",{area:true,en:true})+'</div></div>').join("")+'</div>';
+
+  document.getElementById("tab-journal").innerHTML='<div class="panel"><div style="display:flex;justify-content:space-between;align-items:center;gap:12px"><div><h2>مقالات يوميات الصف</h2><div class="hint">تعديل، إضافة أو حذف قصة صفية.</div></div><button class="btn primary" id="addJournal">+ إضافة قصة</button></div>'+
+    DATA.journal.map((j,i)=>'<div class="item"><div class="item-head"><b>مقال '+(i+1)+'</b><button class="btn danger" data-remove-journal="'+i+'">حذف</button></div>'+
+      imageField("صورة المقال","journal."+i+".image")+
+      '<div class="grid3" style="margin-top:14px">'+field("الصف","journal."+i+".yg")+field("الفصل","journal."+i+".cls")+field("المادة","journal."+i+".subj")+'</div>'+
+      '<div class="grid2" style="margin-top:14px">'+field("العنوان العربي","journal."+i+".ar.t")+field("English title","journal."+i+".en.t",{en:true})+'</div>'+
+      '<div class="grid2" style="margin-top:14px">'+field("النص العربي","journal."+i+".ar.p",{area:true})+field("English text","journal."+i+".en.p",{area:true,en:true})+'</div>'+
+      '<div style="margin-top:14px">'+field("وسوم الفلترة - مثال: arabic writing","journal."+i+".f",{en:true})+'</div></div>').join("")+'</div>';
+
+  document.getElementById("tab-gallery").innerHTML=
+    '<div class="panel"><h2>الصور الرئيسية الإضافية</h2><div class="grid3">'+
+      imageField("صورة المشروع","images.projectBanner")+imageField("صورة الثقافة","images.culture")+imageField("صورة المعلم","images.about")+'</div></div>'+
+    '<div class="panel"><h2>لحظات من الصف</h2>'+
+      DATA.moments.map((m,i)=>'<div class="item">'+cardTitle("صورة "+(i+1))+imageField("الصورة","moments."+i+".image")+
+      '<div class="grid2" style="margin-top:14px">'+field("العنوان العربي","moments."+i+".ar.t")+field("English title","moments."+i+".en.t",{en:true})+'</div>'+
+      '<div class="grid2" style="margin-top:14px">'+field("الوصف العربي","moments."+i+".ar.p",{area:true})+field("English description","moments."+i+".en.p",{area:true,en:true})+'</div></div>').join("")+'</div>'+
+    '<div class="panel"><h2>إبداعات الطلاب</h2>'+
+      DATA.showcase.map((s,i)=>'<div class="item">'+cardTitle("عمل "+(i+1))+imageField("الصورة","showcase."+i+".image")+
+      '<div class="grid2" style="margin-top:14px">'+field("التصنيف العربي","showcase."+i+".cat_ar")+field("English category","showcase."+i+".cat_en",{en:true})+'</div>'+
+      '<div class="grid2" style="margin-top:14px">'+field("العنوان العربي","showcase."+i+".ar.t")+field("English title","showcase."+i+".en.t",{en:true})+'</div>'+
+      '<div class="grid2" style="margin-top:14px">'+field("الوصف العربي","showcase."+i+".ar.m")+field("English description","showcase."+i+".en.m",{en:true})+'</div></div>').join("")+'</div>';
+
+  document.getElementById("tab-about").innerHTML=
+    '<div class="panel"><h2>عن المعلم</h2><div class="grid2">'+field("النص العربي","about.ar.paragraph",{area:true})+field("English paragraph","about.en.paragraph",{area:true,en:true})+'</div>'+
+    '<div class="grid2" style="margin-top:14px">'+field("الاقتباس العربي","about.ar.quote",{area:true})+field("English quote","about.en.quote",{area:true,en:true})+'</div></div>'+
+    '<div class="panel"><h2>المشروع الرئيسي</h2><div class="grid2">'+field("عنوان المشروع بالعربية","project.ar.title")+field("Project title","project.en.title",{en:true})+'</div>'+
+    '<div class="grid2" style="margin-top:14px">'+field("السؤال المحوري بالعربية","project.ar.question",{area:true})+field("Driving question","project.en.question",{area:true,en:true})+'</div>'+
+    '<div class="grid2" style="margin-top:14px">'+field("المسيرة بالعربية","project.ar.process",{area:true})+field("Process","project.en.process",{area:true,en:true})+'</div>'+
+    '<div class="grid2" style="margin-top:14px">'+field("صوت الطالب بالعربية","project.ar.studentVoice",{area:true})+field("Student voice","project.en.studentVoice",{area:true,en:true})+'</div>'+
+    '<div class="grid2" style="margin-top:14px">'+field("تأمل المعلم بالعربية","project.ar.reflection",{area:true})+field("Teacher reflection","project.en.reflection",{area:true,en:true})+'</div></div>';
+
+  bindFields();
+}
+function bindFields(){
+  document.querySelectorAll("[data-path]").forEach(el=>el.addEventListener("input",()=>{
+    setByPath(DATA,el.dataset.path,el.value);
+    const wrap=el.closest(".imgrow"); if(wrap){const img=wrap.querySelector("img"); if(img)img.src=el.value}
+  }));
+  document.querySelectorAll("[data-upload-path]").forEach(el=>el.addEventListener("change",()=>uploadImage(el)));
+  const add=document.getElementById("addJournal");
+  if(add)add.onclick=()=>{DATA.journal.push({f:"arabic",yg:"Y5",cls:"",subj:"Arabic",seed:"j"+Date.now(),image:"",en:{t:"New Classroom Story",p:""},ar:{t:"قصة صفية جديدة",p:""}});render()};
+  document.querySelectorAll("[data-remove-journal]").forEach(b=>b.onclick=()=>{if(confirm("حذف هذا المقال؟")){DATA.journal.splice(Number(b.dataset.removeJournal),1);render()}});
+}
+function showNotice(msg,ok=true){const n=document.getElementById("notice");n.textContent=msg;n.className="notice show "+(ok?"ok":"bad")}
+function connected(ok){document.getElementById("statusDot").className="dot "+(ok?"ok":"");document.getElementById("statusText").textContent=ok?"متصل بـ GitHub":"غير متصل بـ GitHub"}
+async function api(path,opts={}){
+  if(!TOKEN)throw new Error("أدخل GitHub token أولًا");
+  const res=await fetch("https://api.github.com"+path,{
+    ...opts,
+    headers:{"Accept":"application/vnd.github+json","Authorization":"Bearer "+TOKEN,"X-GitHub-Api-Version":"2022-11-28",...(opts.headers||{})}
+  });
+  if(!res.ok){let m="GitHub error "+res.status;try{const j=await res.json();m=j.message||m}catch{}throw new Error(m)}
+  return res.status===204?null:res.json();
+}
+function b64ToUtf8(b64){const bytes=Uint8Array.from(atob(b64.replace(/\n/g,"")),c=>c.charCodeAt(0));return new TextDecoder().decode(bytes)}
+function utf8ToB64(str){const bytes=new TextEncoder().encode(str);let bin="";for(let i=0;i<bytes.length;i++)bin+=String.fromCharCode(bytes[i]);return btoa(bin)}
+async function loadFromGitHub(){
+  TOKEN=tokenEl.value.trim(); if(!TOKEN)throw new Error("أدخل GitHub token");
+  sessionStorage.setItem("mh_admin_token",TOKEN);
+  const j=await api("/repos/"+OWNER+"/"+REPO+"/contents/"+CONTENT_PATH+"?ref="+BRANCH);
+  DATA=JSON.parse(b64ToUtf8(j.content));CONTENT_SHA=j.sha;connected(true);render();showNotice("تم تحميل أحدث محتوى من GitHub بنجاح.");
+}
+async function publish(){
+  if(!DATA)throw new Error("حمّل المحتوى أولًا");
+  DATA.updatedAt=new Date().toISOString();
+  const body={message:"Update website content from admin dashboard",content:utf8ToB64(JSON.stringify(DATA,null,2)),sha:CONTENT_SHA,branch:BRANCH};
+  const j=await api("/repos/"+OWNER+"/"+REPO+"/contents/"+CONTENT_PATH,{method:"PUT",headers:{"Content-Type":"application/json"},body:JSON.stringify(body)});
+  CONTENT_SHA=j.content.sha;localStorage.setItem("mh_site_draft",JSON.stringify(DATA));
+  showNotice("تم النشر إلى GitHub. قد يحتاج GitHub Pages نحو دقيقة لتحديث الموقع.");
+}
+async function uploadImage(input){
+  if(!input.files||!input.files[0])return;
+  try{
+    const file=input.files[0], path=input.dataset.uploadPath;
+    if(file.size>6*1024*1024)throw new Error("حجم الصورة أكبر من 6MB. صغّرها أولًا.");
+    const safe=file.name.replace(/[^a-zA-Z0-9._-]/g,"-");
+    const repoPath="assets/uploads/"+Date.now()+"-"+safe;
+    const bytes=new Uint8Array(await file.arrayBuffer());let bin="";for(let i=0;i<bytes.length;i++)bin+=String.fromCharCode(bytes[i]);
+    await api("/repos/"+OWNER+"/"+REPO+"/contents/"+repoPath,{method:"PUT",headers:{"Content-Type":"application/json"},body:JSON.stringify({message:"Upload website image",content:btoa(bin),branch:BRANCH})});
+    setByPath(DATA,path,repoPath);render();showNotice("تم رفع الصورة إلى GitHub وربطها. اضغط «نشر التعديلات» لتثبيت اختيارها.");
+  }catch(e){showNotice(e.message,false)}
+}
+document.getElementById("connectBtn").onclick=()=>loadFromGitHub().catch(e=>{connected(false);showNotice(e.message,false)});
+document.getElementById("publishBtn").onclick=()=>publish().catch(e=>showNotice(e.message,false));
+document.getElementById("draftBtn").onclick=()=>{if(!DATA)return showNotice("حمّل المحتوى أولًا",false);localStorage.setItem("mh_site_draft",JSON.stringify(DATA));showNotice("تم حفظ المسودة على هذا الجهاز فقط.")};
+document.getElementById("nav").onclick=e=>{const b=e.target.closest("button[data-tab]");if(!b)return;document.querySelectorAll(".nav button").forEach(x=>x.classList.toggle("active",x===b));document.querySelectorAll(".section").forEach(s=>s.classList.remove("active"));document.getElementById("tab-"+b.dataset.tab).classList.add("active")};
+if(TOKEN){loadFromGitHub().catch(()=>connected(false))}
+</script>
+</body>
+</html>
