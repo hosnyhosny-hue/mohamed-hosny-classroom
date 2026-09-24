@@ -329,7 +329,7 @@ footer ul a:hover{color:#fff;padding-inline-start:4px}
       </div>
     </div>
     <div class="hero-visual reveal">
-      <div class="frame"><img src="https://picsum.photos/seed/kcdclassroom/900/700" alt="Classroom learning at King's College Doha"></div>
+      <div class="frame"><img id="heroImage" src="https://picsum.photos/seed/kcdclassroom/900/700" alt="Classroom learning at King's College Doha"></div>
       <div class="hero-badge">
         <span class="dot"></span>
         <div>
@@ -351,7 +351,7 @@ footer ul a:hover{color:#fff;padding-inline-start:4px}
     </div>
     <div class="grid-3">
       <article class="card reveal">
-        <div class="thumb"><img src="https://picsum.photos/seed/kcdstory1/700/480" alt=""></div>
+        <div class="thumb"><img data-managed-img="week-0" src="https://picsum.photos/seed/kcdstory1/700/480" alt=""></div>
         <div class="body">
           <div class="meta-row"><span class="chip blue">Year 5</span><span class="chip">Class 5B</span><span class="chip teal">Arabic</span></div>
           <h3 data-i18n="w1_t">When Our Vocabulary Came Alive</h3>
@@ -360,7 +360,7 @@ footer ul a:hover{color:#fff;padding-inline-start:4px}
         </div>
       </article>
       <article class="card reveal">
-        <div class="thumb"><img src="https://picsum.photos/seed/kcdstory2/700/480" alt=""></div>
+        <div class="thumb"><img data-managed-img="week-1" src="https://picsum.photos/seed/kcdstory2/700/480" alt=""></div>
         <div class="body">
           <div class="meta-row"><span class="chip blue">Year 6</span><span class="chip">Class 6A</span><span class="chip teal">Islamic Studies</span></div>
           <h3 data-i18n="w2_t">A Morning of Reflection and Questions</h3>
@@ -369,7 +369,7 @@ footer ul a:hover{color:#fff;padding-inline-start:4px}
         </div>
       </article>
       <article class="card reveal">
-        <div class="thumb"><img src="https://picsum.photos/seed/kcdstory3/700/480" alt=""></div>
+        <div class="thumb"><img data-managed-img="week-2" src="https://picsum.photos/seed/kcdstory3/700/480" alt=""></div>
         <div class="body">
           <div class="meta-row"><span class="chip blue">Year 4</span><span class="chip">Class 4C</span><span class="chip teal">Qatar History</span></div>
           <h3 data-i18n="w3_t">Mapping Our City, Past and Present</h3>
@@ -548,7 +548,7 @@ footer ul a:hover{color:#fff;padding-inline-start:4px}
       <h2 class="display" data-i18n="proj_title">Our Projects</h2>
       <p class="section-sub" data-i18n="proj_sub">Each project gets its own story: the driving question, the process, the pupil voices, the outcome.</p>
     </div>
-    <div class="project-banner reveal"><img src="https://picsum.photos/seed/kcdproj/1200/460" alt="Project gallery"></div>
+    <div class="project-banner reveal"><img id="projectBannerImage" src="https://picsum.photos/seed/kcdproj/1200/460" alt="Project gallery"></div>
     <div class="project-body">
       <div class="project-main reveal">
         <h3 data-i18n="p1_t">“Letters to Old Doha”</h3>
@@ -598,7 +598,7 @@ footer ul a:hover{color:#fff;padding-inline-start:4px}
           <span>اللغة العربية</span><span>قطر</span><span>التراث</span><span data-i18n="tag_lit">Literature</span><span data-i18n="tag_heritage">Heritage</span><span data-i18n="tag_national">National Occasions</span><span data-i18n="tag_cross">Cross-Cultural Learning</span>
         </div>
       </div>
-      <div class="img"><img src="https://picsum.photos/seed/kcdculture/800/600" alt="Qatari culture"></div>
+      <div class="img"><img id="cultureImage" src="https://picsum.photos/seed/kcdculture/800/600" alt="Qatari culture"></div>
     </div>
   </div>
 </section>
@@ -645,7 +645,7 @@ footer ul a:hover{color:#fff;padding-inline-start:4px}
       <h2 class="display" data-i18n="about_title">My Teaching Story</h2>
     </div>
     <div class="about-grid">
-      <div class="about-photo reveal"><img src="https://picsum.photos/seed/kcdteacher/700/900" alt="Mohamed Hosny"></div>
+      <div class="about-photo reveal"><img id="aboutImage" src="https://picsum.photos/seed/kcdteacher/700/900" alt="Mohamed Hosny"></div>
       <div class="reveal">
         <h3 style="font-size:1.5rem;margin-bottom:14px">Mohamed Hosny</h3>
         <p style="color:var(--ink-soft)" data-i18n="about_p1">I am the Head of Arabic &amp; Islamic at King's College Doha, teaching across the primary and secondary phases. My classroom is built on a simple conviction: language is identity, and identity deserves to be celebrated daily.</p>
@@ -850,7 +850,7 @@ ar:{
 /* ================= DYNAMIC CONTENT (bilingual) ================= */
 const CONTENT = {
 journal:[
- {f:"arabic writing",yg:"Y5",cls:"5B",subj:"العربية",seed:"j1",en:{t:"The Living Dictionary",p:"We turned our word bank into a performance — every vocabulary word acted, sketched and defined by pupils themselves."},ar:{t:"القاموس الحي",p:"حوّلنا بنك الكلمات إلى أداء — كل كلبة تُمثَّل وتُرسَم وتُعرَّف بأيدي الطلاب أنفسهم."}},
+ {f:"arabic writing",yg:"Y5",cls:"5B",subj:"العربية",seed:"j1",en:{t:"The Living Dictionary",p:"We turned our word bank into a performance — every vocabulary word acted, sketched and defined by pupils themselves."},ar:{t:"القاموس الحي",p:"حوّلنا بنك الكلمات إلى أداء — كل كلمة تُمثَّل وتُرسَم وتُعرَّف بأيدي الطلاب أنفسهم."}},
  {f:"qatar culture",yg:"Y4",cls:"4C",subj:"Qatar History",seed:"j2",en:{t:"Old Doha, New Eyes",p:"Archive photographs met modern skylines as pupils built past-and-present maps of their own neighbourhoods."},ar:{t:"الدوحة القديمة بعيون جديدة",p:"التقت صور الأرشيف بأفق اليوم حين بنى الطلاب خرائط لأحيائهم بين الماضي والحاضر."}},
  {f:"reading",yg:"Y6",cls:"6A",subj:"Reading",seed:"j3",en:{t:"A Chapter a Day, a World a Week",p:"Our silent reading ritual grew into book talks — pupils now pitch their novels to the class in sixty seconds."},ar:{t:"فصل كل يوم، وعالم كل أسبوع",p:"نما طقس القراءة الصامتة إلى محادثات كتب — يعرض الطلاب رواياتهم على الصف في ستين ثانية."}},
  {f:"islamic",yg:"Y5",cls:"5A",subj:"Islamic Studies",seed:"j4",en:{t:"Stories of Honesty",p:"Story circles on truthfulness produced questions so thoughtful we dedicated a second lesson just to them."},ar:{t:"قصص الصدق",p:"دوائر قصص عن الصدق أنتجت أسئلة عميقة جعلتنا نخصص درسًا ثانيًا لها وحدها."}},
@@ -931,6 +931,105 @@ resources:[
  {icon:"📄",cls:"f-pdf",t_en:"Exam Preparation Checklist",s_en:"PDF · Year 6 · Exam Prep",t_ar:"قائمة تحضير الامتحانات",s_ar:"PDF · الصف السادس · تحضير الامتحان"}
 ]};
 
+
+/* ================= MANAGED CONTENT ================= */
+let MANAGED_CONTENT = null;
+
+function mergeManagedContent(data){
+  MANAGED_CONTENT = data || {};
+
+  if (data.titles) {
+    ["en","ar"].forEach(lang => {
+      if (!data.titles[lang]) return;
+      Object.entries(data.titles[lang]).forEach(([key,val]) => {
+        if (typeof val === "string") I18N[lang][key] = val;
+      });
+    });
+  }
+
+  if (data.hero) {
+    if (data.hero.en) {
+      if (data.hero.en.title) I18N.en.hero_title = data.hero.en.title;
+      if (data.hero.en.lede) I18N.en.hero_lede = data.hero.en.lede;
+    }
+    if (data.hero.ar) {
+      if (data.hero.ar.title) I18N.ar.hero_title = data.hero.ar.title;
+      if (data.hero.ar.lede) I18N.ar.hero_lede = data.hero.ar.lede;
+    }
+  }
+
+  if (Array.isArray(data.week)) {
+    data.week.slice(0,3).forEach((w,i) => {
+      const n=i+1;
+      if (w.en) {
+        if (w.en.title) I18N.en["w"+n+"_t"] = w.en.title;
+        if (w.en.text) I18N.en["w"+n+"_p"] = w.en.text;
+      }
+      if (w.ar) {
+        if (w.ar.title) I18N.ar["w"+n+"_t"] = w.ar.title;
+        if (w.ar.text) I18N.ar["w"+n+"_p"] = w.ar.text;
+      }
+    });
+  }
+
+  if (Array.isArray(data.journal)) CONTENT.journal = data.journal;
+  if (Array.isArray(data.moments)) CONTENT.moments = data.moments;
+  if (Array.isArray(data.showcase)) CONTENT.showcase = data.showcase;
+
+  if (data.about) {
+    if (data.about.en) {
+      if (data.about.en.paragraph) I18N.en.about_p1 = data.about.en.paragraph;
+      if (data.about.en.quote) I18N.en.about_quote = data.about.en.quote;
+    }
+    if (data.about.ar) {
+      if (data.about.ar.paragraph) I18N.ar.about_p1 = data.about.ar.paragraph;
+      if (data.about.ar.quote) I18N.ar.about_quote = data.about.ar.quote;
+    }
+  }
+
+  if (data.project) {
+    const map = {
+      title:"p1_t", question:"p1_q", process:"p1_proc",
+      studentVoice:"p1_voice", reflection:"p1_ref"
+    };
+    ["en","ar"].forEach(lang => {
+      const src=data.project[lang];
+      if (!src) return;
+      Object.entries(map).forEach(([srcKey,i18nKey]) => {
+        if (src[srcKey]) I18N[lang][i18nKey] = src[srcKey];
+      });
+    });
+  }
+}
+
+function managedSetImage(selector, src){
+  if (!src) return;
+  const el=document.querySelector(selector);
+  if (el) el.src=src;
+}
+
+function applyManagedImages(){
+  const d=MANAGED_CONTENT || {};
+  if (d.hero) managedSetImage("#heroImage", d.hero.image);
+  (d.week || []).slice(0,3).forEach((w,i)=>managedSetImage('[data-managed-img="week-'+i+'"]',w.image));
+  if (d.images) {
+    managedSetImage("#projectBannerImage", d.images.projectBanner);
+    managedSetImage("#cultureImage", d.images.culture);
+    managedSetImage("#aboutImage", d.images.about);
+  }
+}
+
+async function loadManagedContent(){
+  try{
+    const res=await fetch("site-content.json?ts="+Date.now(),{cache:"no-store"});
+    if(!res.ok) return;
+    const data=await res.json();
+    mergeManagedContent(data);
+  }catch(err){
+    console.warn("Managed content unavailable; using built-in defaults.",err);
+  }
+}
+
 /* ================= RENDERERS ================= */
 let LANG = 'en';
 const isAr = () => LANG === 'ar';
@@ -946,6 +1045,7 @@ function renderAll(){
   document.title = isAr() ? 'محمد حسني | يومياتي الصفية في كنجز' : "Mohamed Hosny | My Classroom at King's";
   renderJournal(); renderMoments(); renderLearning(); renderShowcase(); renderTimeline();
   renderValues(); renderPulse(); renderVoice(); renderApproach(); renderResources();
+  applyManagedImages();
 }
 
 /* Journal */
@@ -955,7 +1055,7 @@ function renderJournal(){
   const items=CONTENT.journal.filter(j=>activeFilter==='all'||j.f.split(' ').includes(activeFilter));
   grid.innerHTML=items.map(j=>`
    <article class="card">
-    <div class="thumb"><img src="https://picsum.photos/seed/kcd${j.seed}/700/480" alt="" loading="lazy"></div>
+    <div class="thumb"><img src="${j.image || ('https://picsum.photos/seed/kcd'+j.seed+'/700/480')}" alt="" loading="lazy"></div>
     <div class="body">
       <div class="meta-row"><span class="chip blue">${j.yg}</span><span class="chip">${j.cls}</span><span class="chip teal">${j.subj}</span></div>
       <h3>${isAr()?j.ar.t:j.en.t}</h3>
@@ -974,7 +1074,7 @@ document.getElementById('journalFilters').addEventListener('click',e=>{
 function renderMoments(){
   document.getElementById('momentsGrid').innerHTML=CONTENT.moments.map(m=>`
    <div class="moment reveal in">
-     <img src="https://picsum.photos/seed/kcd${m.seed}/600/480" alt="" loading="lazy">
+     <img src="${m.image || ('https://picsum.photos/seed/kcd'+m.seed+'/600/480')}" alt="" loading="lazy">
      <div class="cap"><h4>${isAr()?m.ar.t:m.en.t}</h4><p>${isAr()?m.ar.p:m.en.p}</p></div>
    </div>`).join('');
 }
@@ -996,7 +1096,7 @@ function renderLearning(){
 function renderShowcase(){
   document.getElementById('showcaseGrid').innerHTML=CONTENT.showcase.map(s=>`
    <div class="showcase-item reveal in">
-     <img src="https://picsum.photos/seed/kcd${s.seed}/500/440" alt="" loading="lazy">
+     <img src="${s.image || ('https://picsum.photos/seed/kcd'+s.seed+'/500/440')}" alt="" loading="lazy">
      <div class="info"><div class="cat">${isAr()?s.cat_ar:s.cat_en}</div><h4>${isAr()?s.ar.t:s.en.t}</h4><p>${isAr()?s.ar.m:s.en.m}</p></div>
    </div>`).join('');
 }
@@ -1059,7 +1159,7 @@ navLinks.addEventListener('click',e=>{ if(e.target.tagName==='A') navLinks.class
 const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.08});
 document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
 
-renderAll();
+(async()=>{ await loadManagedContent(); renderAll(); })();
 </script>
 </body>
 </html>
