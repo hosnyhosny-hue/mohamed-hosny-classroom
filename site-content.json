@@ -1,15 +1,15 @@
 {
   "version": 1,
-  "updatedAt": "2026-09-24",
+  "updatedAt": "2026-09-24T19:24:23.960Z",
   "hero": {
-    "image": "https://picsum.photos/seed/kcdclassroom/900/700",
+    "image": "assets/uploads/1790277854040-Exterior-1.jpg",
     "en": {
-      "title": "Every day in our classroom tells a <em>new learning story</em>.",
-      "lede": "A window into our classroom — sharing learning moments, student achievements, ideas, projects and our everyday journey at King's College Doha."
+      "title": "Teaching language. Building confidence. Creating lasting impact.",
+      "lede": "A window into Arabic, Islamic Studies and Qatar History — where deep learning meets student voice, creativity and identity."
     },
     "ar": {
-      "title": "كل يوم في صفنا قصة تعلّم <em>جديدة</em>.",
-      "lede": "مساحة أشارك من خلالها لحظات التعلّم، إنجازات طلابي، أفكارنا، مشروعاتنا ورحلتنا اليومية داخل كنجز كولج الدوحة."
+      "title": "نعلّم اللغة، نبني الثقة، ونصنع أثرًا يبقى.",
+      "lede": "نافذة على تعليم اللغة العربية والدراسات الإسلامية وتاريخ قطر، حيث يلتقي التعلم العميق بصوت الطالب والإبداع والهوية."
     }
   },
   "titles": {
