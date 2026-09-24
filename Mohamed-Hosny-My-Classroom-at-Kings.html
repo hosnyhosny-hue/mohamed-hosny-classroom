@@ -1,0 +1,1065 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mohamed Hosny | My Classroom at King's</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=IBM+Plex+Sans+Arabic:wght@300;400;500;600;700&family=IBM+Plex+Serif:ital@0;1&family=Amiri:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#1a2233; --ink-soft:#45516b; --ink-mute:#7a8499;
+  --paper:#faf9f6; --card:#ffffff; --line:#e5e2da; --line-soft:#efede6;
+  --kings:#1f3a5f; --kings-deep:#152a47; --gold:#b8955a; --gold-soft:#efe7d8;
+  --teal:#2e6e68; --radius:18px; --shadow:0 2px 6px rgba(26,34,51,.05),0 18px 40px -18px rgba(26,34,51,.12);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'IBM Plex Sans',sans-serif;background:var(--paper);color:var(--ink);line-height:1.65;font-size:16px;-webkit-font-smoothing:antialiased}
+html[dir="rtl"] body{font-family:'IBM Plex Sans Arabic','IBM Plex Sans',sans-serif}
+.ar-serif{font-family:'Amiri','IBM Plex Sans Arabic',serif}
+img{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1180px;margin:0 auto;padding:0 28px}
+/* ---------- Header ---------- */
+header{position:sticky;top:0;z-index:100;background:rgba(250,249,246,.92);backdrop-filter:blur(14px);border-bottom:1px solid var(--line-soft)}
+.navbar{display:flex;align-items:center;justify-content:space-between;height:76px}
+.brand{display:flex;align-items:center;gap:14px}
+.brand img{height:52px;width:auto}
+.brand-name{font-weight:600;font-size:.98rem;line-height:1.25}
+.brand-name small{display:block;font-weight:400;color:var(--ink-mute);font-size:.74rem;letter-spacing:.02em}
+.nav-links{display:flex;gap:6px;align-items:center;list-style:none}
+.nav-links a{font-size:.86rem;font-weight:500;color:var(--ink-soft);padding:8px 13px;border-radius:99px;transition:.25s}
+.nav-links a:hover{background:var(--gold-soft);color:var(--ink)}
+.lang-toggle{display:flex;align-items:center;gap:7px;border:1px solid var(--line);border-radius:99px;padding:7px 15px;font-size:.85rem;font-weight:600;cursor:pointer;background:var(--card);color:var(--kings);transition:.25s;font-family:inherit}
+.lang-toggle:hover{border-color:var(--gold);box-shadow:var(--shadow)}
+.menu-btn{display:none;background:none;border:1px solid var(--line);border-radius:10px;padding:8px 12px;cursor:pointer;font-size:1.1rem;color:var(--ink)}
+@media(max-width:1020px){
+ .nav-links{display:none;position:fixed;inset:76px 0 auto 0;background:var(--paper);flex-direction:column;padding:20px;border-bottom:1px solid var(--line);gap:4px}
+ .nav-links.open{display:flex}
+ .menu-btn{display:block}
+}
+/* ---------- Hero ---------- */
+.hero{position:relative;overflow:hidden;background:linear-gradient(180deg,#fdfcf9 0%,var(--paper) 100%);border-bottom:1px solid var(--line-soft)}
+.hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:56px;align-items:center;padding:88px 0 72px}
+.kicker{display:inline-flex;align-items:center;gap:9px;font-size:.76rem;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);margin-bottom:22px}
+html[dir="rtl"] .kicker{letter-spacing:0}
+.kicker::before{content:"";width:34px;height:1px;background:var(--gold)}
+.hero h1{font-family:'IBM Plex Serif',serif;font-weight:600;font-size:clamp(2.1rem,4.3vw,3.4rem);line-height:1.18;letter-spacing:-.01em}
+html[dir="rtl"] .hero h1,html[dir="rtl"] h2.display{font-family:'Amiri',serif;font-weight:700;letter-spacing:0}
+.hero h1 em{font-style:italic;color:var(--kings)}
+.hero .lede{font-size:1.08rem;color:var(--ink-soft);max-width:52ch;margin:22px 0 34px}
+.cta-row{display:flex;gap:14px;flex-wrap:wrap}
+.btn{display:inline-flex;align-items:center;gap:9px;padding:14px 28px;border-radius:99px;font-weight:600;font-size:.93rem;cursor:pointer;transition:.28s;border:1px solid transparent}
+.btn-primary{background:var(--kings);color:#fff}
+.btn-primary:hover{background:var(--kings-deep);transform:translateY(-2px);box-shadow:0 14px 30px -12px rgba(21,42,71,.5)}
+.btn-ghost{border-color:var(--line);color:var(--ink-soft);background:var(--card)}
+.btn-ghost:hover{border-color:var(--gold);color:var(--ink);transform:translateY(-2px)}
+.hero-visual{position:relative}
+.hero-visual .frame{border-radius:26px;overflow:hidden;box-shadow:var(--shadow);border:1px solid var(--line);transform:rotate(.6deg)}
+.hero-visual .frame img{width:100%;height:440px;object-fit:cover}
+.hero-badge{position:absolute;bottom:-18px;inset-inline-start:-14px;background:var(--card);border:1px solid var(--line);border-radius:16px;padding:14px 20px;box-shadow:var(--shadow);display:flex;gap:12px;align-items:center;transform:rotate(-1deg)}
+.hero-badge .dot{width:10px;height:10px;border-radius:50%;background:var(--teal);animation:pulse 2.2s infinite}
+@keyframes pulse{0%,100%{box-shadow:0 0 0 0 rgba(46,110,104,.35)}50%{box-shadow:0 0 0 8px rgba(46,110,104,0)}}
+.hero-badge strong{font-size:.88rem}
+.hero-badge span{font-size:.76rem;color:var(--ink-mute);display:block}
+@media(max-width:900px){.hero-grid{grid-template-columns:1fr;padding:56px 0 60px}.hero-visual .frame img{height:320px}}
+/* ---------- Sections ---------- */
+section{padding:86px 0}
+.section-head{max-width:720px;margin-bottom:52px}
+.section-head.center{margin-inline:auto;text-align:center}
+.section-head.center .kicker{justify-content:center}
+h2.display{font-family:'IBM Plex Serif',serif;font-size:clamp(1.7rem,3vw,2.5rem);font-weight:600;line-height:1.25;letter-spacing:-.01em}
+.section-sub{color:var(--ink-soft);margin-top:16px;font-size:1.02rem}
+.eyebrow{font-size:.74rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--gold)}
+html[dir="rtl"] .eyebrow{letter-spacing:0}
+/* ---------- Cards ---------- */
+.grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:28px}
+.grid-4{display:grid;grid-template-columns:repeat(4,1fr);gap:24px}
+.grid-2{display:grid;grid-template-columns:repeat(2,1fr);gap:28px}
+@media(max-width:980px){.grid-3,.grid-4{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:640px){.grid-3,.grid-4,.grid-2{grid-template-columns:1fr}}
+.card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;transition:.3s;display:flex;flex-direction:column}
+.card:hover{transform:translateY(-5px);box-shadow:var(--shadow);border-color:#d8d3c6}
+.card .thumb{position:relative;overflow:hidden}
+.card .thumb img{width:100%;height:220px;object-fit:cover;transition:transform .6s ease}
+.card:hover .thumb img{transform:scale(1.05)}
+.card .body{padding:24px 26px 26px;display:flex;flex-direction:column;flex:1}
+.meta-row{display:flex;flex-wrap:wrap;gap:7px;margin-bottom:14px}
+.chip{font-size:.7rem;font-weight:600;letter-spacing:.04em;padding:4px 11px;border-radius:99px;background:var(--gold-soft);color:#7a5f2e;border:1px solid #e3d8bf}
+.chip.blue{background:#e8eef6;color:var(--kings);border-color:#d3deed}
+.chip.teal{background:#e4efee;color:var(--teal);border-color:#cfe2e0}
+.card h3{font-size:1.13rem;font-weight:600;line-height:1.35;margin-bottom:9px}
+.card p{color:var(--ink-soft);font-size:.9rem;flex:1}
+.card .read{margin-top:16px;font-size:.85rem;font-weight:600;color:var(--kings);display:inline-flex;align-items:center;gap:7px}
+html[dir="rtl"] .card .read{flex-direction:row-reverse}
+.card .read::after{content:"→";transition:.25s}
+html[dir="rtl"] .card .read::after{content:"←"}
+.card:hover .read::after{transform:translateX(4px)}
+html[dir="rtl"] .card:hover .read::after{transform:translateX(-4px)}
+/* ---------- Journal filters ---------- */
+.filters{display:flex;flex-wrap:wrap;gap:9px;margin-bottom:40px;justify-content:center}
+.filter-btn{font-family:inherit;font-size:.84rem;font-weight:500;padding:9px 18px;border-radius:99px;border:1px solid var(--line);background:var(--card);color:var(--ink-soft);cursor:pointer;transition:.22s}
+.filter-btn:hover{border-color:var(--gold)}
+.filter-btn.active{background:var(--kings);color:#fff;border-color:var(--kings)}
+.journal-note{text-align:center;color:var(--ink-mute);font-size:.9rem;font-style:italic;margin-top:30px}
+/* ---------- Moments gallery ---------- */
+.moments-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+@media(max-width:980px){.moments-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:640px){.moments-grid{grid-template-columns:1fr}}
+.moment{position:relative;border-radius:var(--radius);overflow:hidden;border:1px solid var(--line)}
+.moment img{width:100%;height:300px;object-fit:cover;transition:transform .7s ease}
+.moment:hover img{transform:scale(1.06)}
+.moment .cap{position:absolute;inset:auto 0 0 0;padding:22px;background:linear-gradient(180deg,transparent,rgba(15,22,38,.88));color:#fff}
+.moment .cap h4{font-size:1rem;margin-bottom:5px}
+.moment .cap p{font-size:.8rem;opacity:.85;line-height:1.5}
+/* ---------- Learning now ---------- */
+.learning-card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:30px;transition:.3s}
+.learning-card:hover{box-shadow:var(--shadow);border-color:#d8d3c6}
+.learning-card .yg{font-size:.72rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--teal);margin-bottom:10px}
+html[dir="rtl"] .learning-card .yg{letter-spacing:0}
+.learning-card h3{font-size:1.18rem;margin-bottom:16px}
+.learning-card dl{display:flex;flex-direction:column;gap:11px;font-size:.88rem}
+.learning-card dt{font-weight:600;color:var(--ink);float:inline-start}
+.learning-card .row{display:flex;gap:8px}
+.learning-card .row b{min-width:110px;color:var(--kings);font-weight:600}
+html[dir="rtl"] .learning-card .row b{min-width:150px}
+.learning-card .row span{color:var(--ink-soft)}
+/* ---------- Showcase ---------- */
+.showcase-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:22px}
+@media(max-width:980px){.showcase-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:640px){.showcase-grid{grid-template-columns:1fr}}
+.showcase-item{position:relative;border-radius:var(--radius);overflow:hidden;border:1px solid var(--line);background:var(--card);transition:.3s}
+.showcase-item:hover{transform:translateY(-4px);box-shadow:var(--shadow)}
+.showcase-item img{width:100%;height:230px;object-fit:cover}
+.showcase-item .info{padding:18px 20px 20px}
+.showcase-item .cat{font-size:.68rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--gold)}
+html[dir="rtl"] .showcase-item .cat{letter-spacing:0}
+.showcase-item h4{font-size:.98rem;margin:7px 0 5px}
+.showcase-item p{font-size:.8rem;color:var(--ink-mute)}
+/* ---------- Timeline ---------- */
+.timeline{position:relative;max-width:820px;margin:0 auto;padding-inline-start:26px}
+.timeline::before{content:"";position:absolute;inset-inline-start:7px;top:6px;bottom:6px;width:2px;background:linear-gradient(var(--gold),var(--kings))}
+.t-item{position:relative;padding:0 0 42px 34px}
+html[dir="rtl"] .t-item{padding:0 34px 42px 0}
+.t-item::before{content:"";position:absolute;inset-inline-start:-26px;top:6px;width:14px;height:14px;border-radius:50%;background:var(--paper);border:3px solid var(--gold)}
+.t-item .month{font-size:.74rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--gold)}
+html[dir="rtl"] .t-item .month{letter-spacing:0}
+.t-item h3{font-size:1.14rem;margin:6px 0 7px}
+.t-item p{color:var(--ink-soft);font-size:.92rem;max-width:56ch}
+/* ---------- Values ---------- */
+.values-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:18px}
+@media(max-width:980px){.values-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:640px){.values-grid{grid-template-columns:1fr}}
+.value-card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:26px 22px;transition:.3s;position:relative;overflow:hidden}
+.value-card::before{content:"";position:absolute;top:0;inset-inline:0;height:4px;background:linear-gradient(90deg,var(--gold),var(--teal))}
+.value-card:hover{transform:translateY(-5px);box-shadow:var(--shadow)}
+.value-card .icon{width:44px;height:44px;border-radius:12px;background:var(--gold-soft);display:grid;place-items:center;font-size:1.25rem;margin-bottom:16px}
+.value-card h3{font-size:1.02rem;margin-bottom:9px}
+.value-card p{font-size:.83rem;color:var(--ink-soft)}
+.value-card .evidence{margin-top:13px;padding-top:12px;border-top:1px dashed var(--line);font-size:.78rem;color:var(--ink-mute);font-style:italic}
+/* ---------- Pulse ---------- */
+.pulse-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:18px}
+@media(max-width:980px){.pulse-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:640px){.pulse-grid{grid-template-columns:1fr}}
+.pulse-card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:24px}
+.pulse-card .label{font-size:.7rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--kings);margin-bottom:12px;display:flex;align-items:center;gap:8px}
+html[dir="rtl"] .pulse-card .label{letter-spacing:0}
+.pulse-card .big{font-size:1.05rem;font-weight:600;line-height:1.45}
+.pulse-card .small{font-size:.8rem;color:var(--ink-mute);margin-top:8px}
+.update-tag{display:inline-block;margin-top:14px;font-size:.68rem;color:var(--teal);font-weight:600;background:#e4efee;padding:3px 10px;border-radius:99px}
+/* ---------- Word of the week ---------- */
+.word-feature{display:grid;grid-template-columns:1fr 1fr;gap:26px}
+@media(max-width:820px){.word-feature{grid-template-columns:1fr}}
+.word-hero{background:linear-gradient(140deg,var(--kings),var(--kings-deep));color:#fff;border-radius:var(--radius);padding:44px;text-align:center;display:flex;flex-direction:column;justify-content:center}
+.word-hero .arabic-word{font-family:'Amiri',serif;font-size:clamp(2.6rem,5vw,4rem);line-height:1.3;margin:8px 0}
+.word-hero .meaning{font-size:1.1rem;opacity:.92;font-style:italic}
+.word-hero .example{margin-top:18px;font-family:'Amiri',serif;font-size:1.25rem;opacity:.9}
+.word-hero .translit{font-size:.85rem;opacity:.6;margin-top:6px;letter-spacing:.06em}
+.word-side{display:flex;flex-direction:column;gap:20px}
+.word-note{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:26px;flex:1}
+.word-note h4{font-size:.78rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--gold);margin-bottom:10px}
+html[dir="rtl"] .word-note h4{letter-spacing:0}
+.word-note p{font-size:.92rem;color:var(--ink-soft)}
+/* ---------- Student voice ---------- */
+.voice-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:22px}
+@media(max-width:980px){.voice-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:640px){.voice-grid{grid-template-columns:1fr}}
+.voice-card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:30px 26px;position:relative;transition:.3s}
+.voice-card:hover{transform:translateY(-4px);box-shadow:var(--shadow)}
+.voice-card .mark{font-family:'IBM Plex Serif',serif;font-size:3rem;color:var(--gold);line-height:.6;display:block;margin-bottom:16px}
+html[dir="rtl"] .voice-card .mark{font-family:'Amiri',serif}
+.voice-card .prompt{font-size:.74rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--teal);margin-bottom:10px}
+html[dir="rtl"] .voice-card .prompt{letter-spacing:0}
+.voice-card q{font-size:1.02rem;line-height:1.6;quotes:"“" "”";display:block}
+.voice-card .who{margin-top:16px;font-size:.8rem;color:var(--ink-mute)}
+/* ---------- Reflection ---------- */
+.reflection{background:var(--card);border:1px solid var(--line);border-radius:24px;padding:52px;position:relative;overflow:hidden}
+@media(max-width:700px){.reflection{padding:34px 26px}}
+.reflection::before{content:"";position:absolute;top:-70px;inset-inline-end:-70px;width:230px;height:230px;border-radius:50%;background:radial-gradient(circle,rgba(184,149,90,.13),transparent 70%)}
+.reflection-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;margin-top:36px}
+@media(max-width:900px){.reflection-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:560px){.reflection-grid{grid-template-columns:1fr}}
+.reflection-grid .r-item{border-top:2px solid var(--gold);padding-top:16px}
+.reflection-grid .r-item h4{font-size:.82rem;font-weight:700;color:var(--kings);margin-bottom:8px}
+.reflection-grid .r-item p{font-size:.88rem;color:var(--ink-soft)}
+/* ---------- Projects ---------- */
+.project-banner{border-radius:24px;overflow:hidden;border:1px solid var(--line);margin-bottom:26px}
+.project-banner img{width:100%;height:340px;object-fit:cover}
+@media(max-width:700px){.project-banner img{height:220px}}
+.project-body{display:grid;grid-template-columns:1.4fr 1fr;gap:26px}
+@media(max-width:820px){.project-body{grid-template-columns:1fr}}
+.project-main{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:36px}
+.project-main h3{font-size:1.3rem;margin-bottom:8px}
+.project-main .dq{font-family:'IBM Plex Serif',serif;font-style:italic;color:var(--kings);font-size:1.05rem;margin-bottom:22px}
+html[dir="rtl"] .project-main .dq{font-family:'Amiri',serif}
+.project-main h4{font-size:.8rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--gold);margin:20px 0 8px}
+html[dir="rtl"] .project-main h4{letter-spacing:0}
+.project-main p{font-size:.92rem;color:var(--ink-soft)}
+.project-side{display:flex;flex-direction:column;gap:20px}
+.project-stat{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:24px}
+.project-stat b{color:var(--kings);display:block;font-size:.82rem;margin-bottom:5px}
+.project-stat span{font-size:.88rem;color:var(--ink-soft)}
+/* ---------- Culture ---------- */
+.culture-band{background:linear-gradient(140deg,#10203a,var(--kings-deep) 55%,#233d63);color:#fff;border-radius:28px;overflow:hidden;display:grid;grid-template-columns:1fr 1fr}
+@media(max-width:860px){.culture-band{grid-template-columns:1fr}}
+.culture-band .text{padding:56px}
+@media(max-width:700px){.culture-band .text{padding:34px 26px}}
+.culture-band .text h2{font-family:'IBM Plex Serif',serif;font-size:clamp(1.5rem,2.6vw,2.1rem);margin-bottom:16px}
+html[dir="rtl"] .culture-band .text h2{font-family:'Amiri',serif}
+.culture-band .text p{color:rgba(255,255,255,.82);font-size:.95rem;margin-bottom:14px}
+.culture-tags{display:flex;flex-wrap:wrap;gap:9px;margin-top:22px}
+.culture-tags span{font-size:.78rem;padding:7px 15px;border-radius:99px;border:1px solid rgba(255,255,255,.28);color:rgba(255,255,255,.9)}
+.culture-band .img img{width:100%;height:100%;object-fit:cover;min-height:340px}
+/* ---------- Library ---------- */
+.library-tools{display:flex;gap:12px;max-width:640px;margin:0 auto 40px}
+.search-box{flex:1;display:flex;align-items:center;gap:10px;background:var(--card);border:1px solid var(--line);border-radius:99px;padding:12px 22px}
+.search-box input{border:none;outline:none;background:none;font-family:inherit;font-size:.95rem;width:100%;color:var(--ink)}
+.res-list{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;max-width:860px;margin:0 auto}
+@media(max-width:700px){.res-list{grid-template-columns:1fr}}
+.res-item{display:flex;align-items:center;gap:16px;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:16px 20px;transition:.25s}
+.res-item:hover{border-color:var(--gold);box-shadow:var(--shadow)}
+.res-item .ficon{width:42px;height:42px;border-radius:11px;display:grid;place-items:center;font-size:1.05rem;flex-shrink:0}
+.f-pdf{background:#fdecec;color:#c0392b}.f-doc{background:#e8eef6;color:var(--kings)}.f-ppt{background:#fdeee2;color:#d35400}.f-vid{background:#e4efee;color:var(--teal)}.f-link{background:#f0ecf9;color:#6c4bb0}
+.res-item b{font-size:.9rem;display:block}
+.res-item span{font-size:.76rem;color:var(--ink-mute)}
+/* ---------- About ---------- */
+.about-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:56px;align-items:start}
+@media(max-width:860px){.about-grid{grid-template-columns:1fr}}
+.about-photo{border-radius:24px;overflow:hidden;border:1px solid var(--line);box-shadow:var(--shadow)}
+.about-photo img{width:100%;height:460px;object-fit:cover}
+@media(max-width:700px){.about-photo img{height:340px}}
+.about-quote{font-family:'IBM Plex Serif',serif;font-style:italic;font-size:clamp(1.15rem,2vw,1.45rem);line-height:1.6;color:var(--kings);border-inline-start:3px solid var(--gold);padding-inline-start:24px;margin:26px 0}
+html[dir="rtl"] .about-quote{font-family:'Amiri',serif}
+.about-facts{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;margin:28px 0}
+@media(max-width:560px){.about-facts{grid-template-columns:1fr}}
+.about-facts div{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:16px 20px}
+.about-facts b{display:block;font-size:.8rem;color:var(--gold);margin-bottom:4px}
+.about-facts span{font-size:.9rem}
+.approach-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:34px}
+@media(max-width:980px){.approach-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:560px){.approach-grid{grid-template-columns:1fr}}
+.approach-card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:24px 22px;transition:.3s}
+.approach-card:hover{transform:translateY(-4px);box-shadow:var(--shadow);border-color:var(--gold)}
+.approach-card .n{font-family:'IBM Plex Serif',serif;font-size:1.4rem;color:var(--gold)}
+.approach-card h4{font-size:.96rem;margin:10px 0 7px}
+.approach-card p{font-size:.82rem;color:var(--ink-soft)}
+/* ---------- Footer ---------- */
+footer{background:var(--kings-deep);color:#fff;padding:70px 0 34px;margin-top:40px}
+.foot-grid{display:grid;grid-template-columns:1.3fr 1fr 1fr;gap:44px;padding-bottom:44px;border-bottom:1px solid rgba(255,255,255,.14)}
+@media(max-width:860px){.foot-grid{grid-template-columns:1fr}}
+.foot-brand{display:flex;gap:16px;align-items:flex-start}
+.foot-brand img{height:56px;background:#fff;padding:6px 10px;border-radius:10px}
+.foot-brand b{font-size:1.02rem}
+.foot-brand span{display:block;font-size:.8rem;opacity:.7;margin-top:3px}
+footer h5{font-size:.74rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);margin-bottom:16px}
+html[dir="rtl"] footer h5{letter-spacing:0}
+footer ul{list-style:none;display:flex;flex-direction:column;gap:9px}
+footer ul a{font-size:.88rem;color:rgba(255,255,255,.78);transition:.2s}
+footer ul a:hover{color:#fff;padding-inline-start:4px}
+.foot-note{margin-top:30px;font-size:.78rem;color:rgba(255,255,255,.55);max-width:70ch;line-height:1.7}
+.foot-bottom{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;padding-top:24px;font-size:.76rem;color:rgba(255,255,255,.5)}
+/* ---------- Utilities ---------- */
+.alt-bg{background:#f3f1ea}
+.divider-soft{height:1px;background:var(--line-soft)}
+.reveal{opacity:0;transform:translateY(24px);transition:opacity .7s ease,transform .7s ease}
+.reveal.in{opacity:1;transform:none}
+</style>
+</head>
+<body>
+
+<!-- ============ HEADER ============ -->
+<header>
+  <div class="wrap navbar">
+    <a class="brand" href="#top">
+      <img src="https://www.kingscollegedoha.com/wp-content/uploads/sites/33/2025/10/KCD-logo.png" alt="King's College Doha">
+      <div class="brand-name">
+        <span data-i18n="brand_name">Mohamed Hosny</span>
+        <small data-i18n="brand_sub">Head of Arabic &amp; Islamic · King's College Doha</small>
+      </div>
+    </a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#top" data-i18n="nav_home">Home</a></li>
+      <li><a href="#journal" data-i18n="nav_journal">Classroom Journal</a></li>
+      <li><a href="#journey" data-i18n="nav_journey">Learning Journey</a></li>
+      <li><a href="#showcase" data-i18n="nav_showcase">Student Showcase</a></li>
+      <li><a href="#projects" data-i18n="nav_projects">Projects</a></li>
+      <li><a href="#library" data-i18n="nav_library">Resources</a></li>
+      <li><a href="#about" data-i18n="nav_about">About</a></li>
+    </ul>
+    <div style="display:flex;gap:10px;align-items:center">
+      <button class="lang-toggle" id="langToggle">
+        <span id="langLabel">العربية</span>
+      </button>
+      <button class="menu-btn" id="menuBtn" aria-label="Menu">☰</button>
+    </div>
+  </div>
+</header>
+
+<!-- ============ HERO ============ -->
+<section class="hero" id="top" style="padding-top:0">
+  <div class="wrap hero-grid">
+    <div>
+      <div class="kicker" data-i18n="hero_kicker">Head of Arabic &amp; Islamic · King's College Doha</div>
+      <h1 data-i18n="hero_title">Every day in our classroom tells a <em>new learning story</em>.</h1>
+      <p class="lede" data-i18n="hero_lede">A window into our classroom — sharing learning moments, student achievements, ideas, projects and our everyday journey at King's College Doha.</p>
+      <div class="cta-row">
+        <a href="#journal" class="btn btn-primary" data-i18n="hero_cta1">Explore Our Classroom</a>
+        <a href="#moments" class="btn btn-ghost" data-i18n="hero_cta2">Latest Learning Moments</a>
+      </div>
+    </div>
+    <div class="hero-visual reveal">
+      <div class="frame"><img src="https://picsum.photos/seed/kcdclassroom/900/700" alt="Classroom learning at King's College Doha"></div>
+      <div class="hero-badge">
+        <span class="dot"></span>
+        <div>
+          <strong data-i18n="hero_badge_t">This classroom is alive with learning</strong>
+          <span data-i18n="hero_badge_s">Updated weekly with new stories</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ THIS WEEK ============ -->
+<section id="week">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div class="eyebrow" data-i18n="week_eyebrow">Fresh from the classroom</div>
+      <h2 class="display" data-i18n="week_title">This Week in Our Classroom</h2>
+      <p class="section-sub" data-i18n="week_sub">Three recent stories from our learning — written as they happened.</p>
+    </div>
+    <div class="grid-3">
+      <article class="card reveal">
+        <div class="thumb"><img src="https://picsum.photos/seed/kcdstory1/700/480" alt=""></div>
+        <div class="body">
+          <div class="meta-row"><span class="chip blue">Year 5</span><span class="chip">Class 5B</span><span class="chip teal">Arabic</span></div>
+          <h3 data-i18n="w1_t">When Our Vocabulary Came Alive</h3>
+          <p data-i18n="w1_p">Pupils turned our unit word bank into a living dictionary, acting out each word for their peers to guess — laughter included.</p>
+          <a href="#journal" class="read" data-i18n="read_story">Read Story</a>
+        </div>
+      </article>
+      <article class="card reveal">
+        <div class="thumb"><img src="https://picsum.photos/seed/kcdstory2/700/480" alt=""></div>
+        <div class="body">
+          <div class="meta-row"><span class="chip blue">Year 6</span><span class="chip">Class 6A</span><span class="chip teal">Islamic Studies</span></div>
+          <h3 data-i18n="w2_t">A Morning of Reflection and Questions</h3>
+          <p data-i18n="w2_p">We explored the values of honesty through story circles, and the questions pupils asked kept us talking long after the bell.</p>
+          <a href="#journal" class="read" data-i18n="read_story">Read Story</a>
+        </div>
+      </article>
+      <article class="card reveal">
+        <div class="thumb"><img src="https://picsum.photos/seed/kcdstory3/700/480" alt=""></div>
+        <div class="body">
+          <div class="meta-row"><span class="chip blue">Year 4</span><span class="chip">Class 4C</span><span class="chip teal">Qatar History</span></div>
+          <h3 data-i18n="w3_t">Mapping Our City, Past and Present</h3>
+          <p data-i18n="w3_p">Comparing old photographs of Doha with the skyline outside our window sparked the best discussion of the term so far.</p>
+          <a href="#journal" class="read" data-i18n="read_story">Read Story</a>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ JOURNAL ============ -->
+<section id="journal" class="alt-bg">
+  <div class="wrap">
+    <div class="section-head center reveal">
+      <div class="eyebrow" data-i18n="journal_eyebrow">The heart of this site</div>
+      <h2 class="display" data-i18n="journal_title">Classroom Journal</h2>
+      <p class="section-sub" data-i18n="journal_sub">A premium educational magazine of lessons, reflections and discoveries — filter by subject or year group.</p>
+    </div>
+    <div class="filters" id="journalFilters">
+      <button class="filter-btn active" data-f="all" data-i18n="f_all">All</button>
+      <button class="filter-btn" data-f="arabic">العربية</button>
+      <button class="filter-btn" data-f="islamic">Islamic Studies</button>
+      <button class="filter-btn" data-f="qatar">Qatar History</button>
+      <button class="filter-btn" data-f="projects">Projects</button>
+      <button class="filter-btn" data-f="reading">Reading</button>
+      <button class="filter-btn" data-f="writing">Writing</button>
+      <button class="filter-btn" data-f="speaking">Speaking</button>
+      <button class="filter-btn" data-f="culture">Culture</button>
+      <button class="filter-btn" data-f="celebrations">Celebrations</button>
+    </div>
+    <div class="grid-3" id="journalGrid"></div>
+    <p class="journal-note" data-i18n="journal_note">Publishing template: + New Classroom Story — date, year group, lesson, what happened, student voice, teacher reflection, tags. A new story takes only minutes.</p>
+  </div>
+</section>
+
+<!-- ============ MOMENTS ============ -->
+<section id="moments">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div class="eyebrow" data-i18n="moments_eyebrow">Photographs that teach</div>
+      <h2 class="display" data-i18n="moments_title">Classroom Moments</h2>
+      <p class="section-sub" data-i18n="moments_sub">Every image here tells a learning story — what pupils are doing, what they are learning, and why it matters.</p>
+    </div>
+    <div class="moments-grid" id="momentsGrid"></div>
+  </div>
+</section>
+
+<!-- ============ LEARNING NOW ============ -->
+<section class="alt-bg" id="learning">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div class="eyebrow" data-i18n="learning_eyebrow">For pupils &amp; families</div>
+      <h2 class="display" data-i18n="learning_title">What Are We Learning Now?</h2>
+      <p class="section-sub" data-i18n="learning_sub">A simple, honest look at what each year group is working on right now.</p>
+    </div>
+    <div class="grid-3" id="learningGrid"></div>
+  </div>
+</section>
+
+<!-- ============ SHOWCASE ============ -->
+<section id="showcase">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div class="eyebrow" data-i18n="showcase_eyebrow">Pupil work, presented with pride</div>
+      <h2 class="display" data-i18n="showcase_title">Student Learning Showcase</h2>
+      <p class="section-sub" data-i18n="showcase_sub">Writing, projects, presentations and creative work — shared with the permission of pupils and families.</p>
+    </div>
+    <div class="showcase-grid" id="showcaseGrid"></div>
+  </div>
+</section>
+
+<!-- ============ JOURNEY ============ -->
+<section id="journey" class="alt-bg">
+  <div class="wrap">
+    <div class="section-head center reveal">
+      <div class="eyebrow" data-i18n="journey_eyebrow">The year, unfolding</div>
+      <h2 class="display" data-i18n="journey_title">Our Learning Journey</h2>
+      <p class="section-sub" data-i18n="journey_sub">Milestones from the academic year — new ones are added as we grow.</p>
+    </div>
+    <div class="timeline" id="timeline"></div>
+  </div>
+</section>
+
+<!-- ============ VALUES ============ -->
+<section id="values">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div class="eyebrow" data-i18n="values_eyebrow">Character in action</div>
+      <h2 class="display" data-i18n="values_title">King's Values in Action</h2>
+      <p class="section-sub" data-i18n="values_sub">Not a list on a wall — real classroom stories behind each value.</p>
+    </div>
+    <div class="values-grid" id="valuesGrid"></div>
+  </div>
+</section>
+
+<!-- ============ PULSE ============ -->
+<section id="pulse" class="alt-bg">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div class="eyebrow" data-i18n="pulse_eyebrow">Live from our classroom</div>
+      <h2 class="display" data-i18n="pulse_title">Classroom Pulse</h2>
+      <p class="section-sub" data-i18n="pulse_sub">The five things animating our week — quick to read, quick to update.</p>
+    </div>
+    <div class="pulse-grid" id="pulseGrid"></div>
+  </div>
+</section>
+
+<!-- ============ WORD OF THE WEEK ============ -->
+<section id="word">
+  <div class="wrap">
+    <div class="section-head center reveal">
+      <div class="eyebrow" data-i18n="word_eyebrow">A signature feature of our Arabic Department</div>
+      <h2 class="display" data-i18n="word_title">Arabic Word of the Week</h2>
+    </div>
+    <div class="word-feature reveal">
+      <div class="word-hero">
+        <div class="eyebrow" style="color:var(--gold)" data-i18n="ww_label">Word of the Week</div>
+        <div class="arabic-word">حُرِّيَّة</div>
+        <div class="meaning" data-i18n="ww_meaning">“Freedom” — the state of being free</div>
+        <div class="example">التعليم طريق الحرية</div>
+        <div class="translit">ḥurriyyah · al-taʿlīm ṭarīq al-ḥurriyyah — “Education is the path to freedom”</div>
+      </div>
+      <div class="word-side">
+        <div class="word-note">
+          <h4 data-i18n="ww_note_t">Linguistic Note</h4>
+          <p data-i18n="ww_note_p">Derived from the root ح-ر-ر, which carries meanings of freedom, clarity and nobility. Related words include مُحَرَّر (freed) and حَرّ (heat — the free, open sun).</p>
+        </div>
+        <div class="word-note">
+          <h4 data-i18n="expr_t">Expression of the Week</h4>
+          <p><span class="ar-serif" style="font-size:1.15rem">على قد لحافك مدّ رجليك</span><br><span style="color:var(--ink-mute);font-size:.85rem" data-i18n="expr_p">“Stretch your legs as far as your blanket reaches” — live within your means; one of Arabic's most beloved proverbs.</span></p>
+        </div>
+        <div class="word-note">
+          <h4 data-i18n="beauty_t">The Beauty of Arabic</h4>
+          <p data-i18n="beauty_p">The word شمس (sun) is feminine in Arabic while قمر (moon) is masculine — the opposite of many European languages. Our Year 6 pupils debated why, and their theories were wonderful.</p>
+          <span class="update-tag" data-i18n="easy_update">Easy to update each week</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ STUDENT VOICE ============ -->
+<section id="voice" class="alt-bg">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div class="eyebrow" data-i18n="voice_eyebrow">In their own words</div>
+      <h2 class="display" data-i18n="voice_title">Student Voice</h2>
+      <p class="section-sub" data-i18n="voice_sub">Approved pupil reflections, shared with pride — first names only, always.</p>
+    </div>
+    <div class="voice-grid" id="voiceGrid"></div>
+  </div>
+</section>
+
+<!-- ============ WEEKLY REFLECTION ============ -->
+<section id="reflection">
+  <div class="wrap">
+    <div class="reflection reveal">
+      <div class="eyebrow" data-i18n="refl_eyebrow">Teacher's notebook</div>
+      <h2 class="display" data-i18n="refl_title">Weekly Reflection</h2>
+      <div class="reflection-grid">
+        <div class="r-item"><h4 data-i18n="r1_t">A moment that made me proud</h4><p data-i18n="r1_p">A usually quiet pupil volunteered to read her story aloud — twice — because her classmates asked her to.</p></div>
+        <div class="r-item"><h4 data-i18n="r2_t">Something pupils discovered</h4><p data-i18n="r2_p">That Arabic calligraphy is not decoration but mathematics — geometry, proportion and rhythm working together.</p></div>
+        <div class="r-item"><h4 data-i18n="r3_t">A question we're still exploring</h4><p data-i18n="r3_p">“Why do some words feel beautiful before we even know what they mean?” — we will chase this in poetry next week.</p></div>
+        <div class="r-item"><h4 data-i18n="r4_t">One thing to improve</h4><p data-i18n="r4_p">More wait-time after questions. Great ideas need a few extra seconds to surface.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PROJECTS ============ -->
+<section id="projects" class="alt-bg">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div class="eyebrow" data-i18n="proj_eyebrow">Mini case studies</div>
+      <h2 class="display" data-i18n="proj_title">Our Projects</h2>
+      <p class="section-sub" data-i18n="proj_sub">Each project gets its own story: the driving question, the process, the pupil voices, the outcome.</p>
+    </div>
+    <div class="project-banner reveal"><img src="https://picsum.photos/seed/kcdproj/1200/460" alt="Project gallery"></div>
+    <div class="project-body">
+      <div class="project-main reveal">
+        <h3 data-i18n="p1_t">“Letters to Old Doha”</h3>
+        <div class="dq" data-i18n="p1_q">What would we write to the Doha of fifty years ago — and what would it write back?</div>
+        <h4 data-i18n="p_process">The Process</h4>
+        <p data-i18n="p1_proc">Year 5 pupils interviewed family members about old Doha, studied archive photographs, then drafted bilingual letters in Arabic and English before designing aged-paper editions with calligraphic borders.</p>
+        <h4 data-i18n="p_voice">Student Voice</h4>
+        <p data-i18n="p1_voice">“I learned that my grandfather's Doha had more sand than glass. Writing to him made history feel like a conversation, not a lesson.” — Year 5 pupil</p>
+        <h4 data-i18n="p_reflect">Teacher Reflection</h4>
+        <p data-i18n="p1_ref">The bilingual letters became the strongest writing assessment of the term — pupils chose which language carried their emotion, then translated the feeling, not just the words.</p>
+      </div>
+      <div class="project-side reveal">
+        <div class="project-stat"><b data-i18n="ps_yg">Year Group</b><span>Year 5 · Classes 5A–5C</span></div>
+        <div class="project-stat"><b data-i18n="ps_goals">Learning Goals</b><span data-i18n="ps_goals_v">Bilingual writing · historical empathy · calligraphy · interview skills</span></div>
+        <div class="project-stat"><b data-i18n="ps_outcome">Final Outcome</b><span data-i18n="ps_outcome_v">A bound class anthology displayed at the term exhibition</span></div>
+        <div class="project-stat"><b data-i18n="ps_next">What Comes Next</b><span data-i18n="ps_next_v">Recording audio readings of selected letters for families</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CELEBRATING PROGRESS ============ -->
+<section id="celebrate">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div class="eyebrow" data-i18n="cel_eyebrow">Effort above grades</div>
+      <h2 class="display" data-i18n="cel_title">Celebrating Progress</h2>
+      <p class="section-sub" data-i18n="cel_sub">Reading milestones, improved drafts, personal bests and kind moments — the wins that never appear on a report card.</p>
+    </div>
+    <div class="grid-3">
+      <div class="learning-card reveal"><div class="yg" data-i18n="c1_t">Reading Milestone</div><h3 data-i18n="c1_h">100,000 words read</h3><p style="color:var(--ink-soft);font-size:.9rem" data-i18n="c1_p">Our Year 6 reading circle crossed one hundred thousand words this month — celebrated with a class book spine wall.</p></div>
+      <div class="learning-card reveal"><div class="yg" data-i18n="c2_t">Improvement</div><h3 data-i18n="c2_h">Draft two, much braver</h3><p style="color:var(--ink-soft);font-size:.9rem" data-i18n="c2_p">Every pupil who rewrote a first draft earned our “Brave Editor” certificate — the redraft pile was our proudest paperwork.</p></div>
+      <div class="learning-card reveal"><div class="yg" data-i18n="c3_t">Competition</div><h3 data-i18n="c3_h">Inter-house Calligraphy</h3><p style="color:var(--ink-soft);font-size:.9rem" data-i18n="c3_p">Three pupils represented the school at the inter-house calligraphy finals — win or lose, their practice journeys filled a display board.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CULTURE ============ -->
+<section id="culture" class="alt-bg" style="padding-top:60px;padding-bottom:60px">
+  <div class="wrap">
+    <div class="culture-band reveal">
+      <div class="text">
+        <div class="eyebrow" style="color:var(--gold)" data-i18n="cul_eyebrow">Language, Identity &amp; Culture</div>
+        <h2 data-i18n="cul_title">Where Arabic Meets Qatar</h2>
+        <p data-i18n="cul_p1">This is a cultural space as much as a classroom one — celebrating the Arabic language, Qatari heritage, literature and national occasions, and the cross-cultural learning that makes King's a truly international community.</p>
+        <div class="culture-tags">
+          <span>اللغة العربية</span><span>قطر</span><span>التراث</span><span data-i18n="tag_lit">Literature</span><span data-i18n="tag_heritage">Heritage</span><span data-i18n="tag_national">National Occasions</span><span data-i18n="tag_cross">Cross-Cultural Learning</span>
+        </div>
+      </div>
+      <div class="img"><img src="https://picsum.photos/seed/kcdculture/800/600" alt="Qatari culture"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ LIBRARY ============ -->
+<section id="library">
+  <div class="wrap">
+    <div class="section-head center reveal">
+      <div class="eyebrow" data-i18n="lib_eyebrow">Everything in one place</div>
+      <h2 class="display" data-i18n="lib_title">Classroom Library</h2>
+      <p class="section-sub" data-i18n="lib_sub">Revision guides, worksheets, videos and extension materials — searchable in seconds.</p>
+    </div>
+    <div class="library-tools reveal">
+      <div class="search-box">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#7a8499" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg>
+        <input type="text" id="libSearch" data-i18n-ph="lib_ph" placeholder="Search resources — try “grammar”, “reading”, “Year 6”…">
+      </div>
+    </div>
+    <div class="res-list" id="resList"></div>
+  </div>
+</section>
+
+<!-- ============ FAMILY WINDOW ============ -->
+<section id="family" class="alt-bg">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div class="eyebrow" data-i18n="fam_eyebrow">A friendly view for home</div>
+      <h2 class="display" data-i18n="fam_title">Family Window</h2>
+      <p class="section-sub" data-i18n="fam_sub">Only appropriate public learning information — no grades, no personal data, just ways to share the journey.</p>
+    </div>
+    <div class="grid-3">
+      <div class="learning-card reveal"><div class="yg" data-i18n="fam1_t">How to support at home</div><p style="color:var(--ink-soft);font-size:.92rem;margin-top:10px" data-i18n="fam1_p">Ten minutes of Arabic conversation at dinner outperforms an hour of worksheets. Ask your child to teach you this week's word — teaching is the deepest form of learning.</p></div>
+      <div class="learning-card reveal"><div class="yg" data-i18n="fam2_t">Recommended reading</div><p style="color:var(--ink-soft);font-size:.92rem;margin-top:10px" data-i18n="fam2_p">This term's class library corner features folk tales from the Gulf, a bilingual poetry shelf, and our ever-growing “pupil picks” wall chosen by the readers themselves.</p></div>
+      <div class="learning-card reveal"><div class="yg" data-i18n="fam3_t">Classroom reminders</div><p style="color:var(--ink-soft);font-size:.92rem;margin-top:10px" data-i18n="fam3_p">Reading journals are checked on Sundays. Project exhibition invitations go home next week. As always, the official school calendar remains the source of truth for dates.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ ABOUT ============ -->
+<section id="about">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div class="eyebrow" data-i18n="about_eyebrow">The teacher behind the stories</div>
+      <h2 class="display" data-i18n="about_title">My Teaching Story</h2>
+    </div>
+    <div class="about-grid">
+      <div class="about-photo reveal"><img src="https://picsum.photos/seed/kcdteacher/700/900" alt="Mohamed Hosny"></div>
+      <div class="reveal">
+        <h3 style="font-size:1.5rem;margin-bottom:14px">Mohamed Hosny</h3>
+        <p style="color:var(--ink-soft)" data-i18n="about_p1">I am the Head of Arabic &amp; Islamic at King's College Doha, teaching across the primary and secondary phases. My classroom is built on a simple conviction: language is identity, and identity deserves to be celebrated daily.</p>
+        <div class="about-quote" data-i18n="about_quote">“I believe the best classrooms are places where pupils feel safe to try, confident to question and excited to discover.”</div>
+        <div class="about-facts">
+          <div><b data-i18n="af1_t">Subjects</b><span data-i18n="af1_v">Arabic · Islamic Studies · Qatar History</span></div>
+          <div><b data-i18n="af2_t">Year Groups</b><span data-i18n="af2_v">Years 3 – 9</span></div>
+          <div><b data-i18n="af3_t">Interests</b><span data-i18n="af3_v">Calligraphy · Arabic literature · bilingual literacy</span></div>
+          <div><b data-i18n="af4_t">In my classroom</b><span data-i18n="af4_v">I want every pupil to feel their language is a gift, their questions are welcome, and their progress — however quiet — is worth celebrating.</span></div>
+        </div>
+        <div class="eyebrow" style="margin-top:36px" data-i18n="appr_eyebrow">How I teach</div>
+        <h3 style="font-size:1.25rem;margin-top:8px" data-i18n="appr_title">My Teaching Approach</h3>
+        <div class="approach-grid" id="approachGrid"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="foot-brand">
+        <img src="https://www.kingscollegedoha.com/wp-content/uploads/sites/33/2025/10/KCD-logo.png" alt="King's College Doha">
+        <div>
+          <b>Mohamed Hosny</b>
+          <span data-i18n="foot_role">Head of Arabic &amp; Islamic · King's College Doha</span>
+          <button class="lang-toggle" id="langToggle2" style="margin-top:16px;background:transparent;color:#fff;border-color:rgba(255,255,255,.3)"><span id="langLabel2">العربية</span></button>
+        </div>
+      </div>
+      <div>
+        <h5 data-i18n="foot_nav">Navigate</h5>
+        <ul>
+          <li><a href="#top" data-i18n="nav_home">Home</a></li>
+          <li><a href="#journal" data-i18n="nav_journal">Classroom Journal</a></li>
+          <li><a href="#showcase" data-i18n="nav_showcase">Student Showcase</a></li>
+          <li><a href="#projects" data-i18n="nav_projects">Projects</a></li>
+          <li><a href="#library" data-i18n="nav_library">Resources</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5 data-i18n="foot_school">The School</h5>
+        <ul>
+          <li><a href="https://www.kingscollegedoha.com" target="_blank" rel="noopener" data-i18n="foot_kcd">Official King's College Doha website ↗</a></li>
+          <li><a href="#family" data-i18n="fam_title">Family Window</a></li>
+          <li><a href="#about" data-i18n="about_title">My Teaching Story</a></li>
+        </ul>
+      </div>
+    </div>
+    <p class="foot-note" data-i18n="foot_note">This personal classroom journal celebrates learning at King's College Doha. Official school information should always be obtained from King's College Doha.</p>
+    <div class="foot-bottom">
+      <span>© 2026 Mohamed Hosny · <span data-i18n="foot_made">A living classroom journal</span></span>
+      <span data-i18n="foot_privacy">No pupil surnames, personal data or grades are ever published here.</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+/* ================= I18N ================= */
+const I18N = {
+en:{
+ brand_name:"Mohamed Hosny",brand_sub:"Head of Arabic & Islamic · King's College Doha",
+ nav_home:"Home",nav_journal:"Classroom Journal",nav_journey:"Learning Journey",nav_showcase:"Student Showcase",nav_projects:"Projects",nav_library:"Resources",nav_about:"About",
+ hero_kicker:"Head of Arabic & Islamic · King's College Doha",
+ hero_title:'Every day in our classroom tells a <em>new learning story</em>.',
+ hero_lede:"A window into our classroom — sharing learning moments, student achievements, ideas, projects and our everyday journey at King's College Doha.",
+ hero_cta1:"Explore Our Classroom",hero_cta2:"Latest Learning Moments",
+ hero_badge_t:"This classroom is alive with learning",hero_badge_s:"Updated weekly with new stories",
+ week_eyebrow:"Fresh from the classroom",week_title:"This Week in Our Classroom",week_sub:"Three recent stories from our learning — written as they happened.",
+ w1_t:"When Our Vocabulary Came Alive",w1_p:"Pupils turned our unit word bank into a living dictionary, acting out each word for their peers to guess — laughter included.",
+ w2_t:"A Morning of Reflection and Questions",w2_p:"We explored the values of honesty through story circles, and the questions pupils asked kept us talking long after the bell.",
+ w3_t:"Mapping Our City, Past and Present",w3_p:"Comparing old photographs of Doha with the skyline outside our window sparked the best discussion of the term so far.",
+ read_story:"Read Story",
+ journal_eyebrow:"The heart of this site",journal_title:"Classroom Journal",journal_sub:"A premium educational magazine of lessons, reflections and discoveries — filter by subject or year group.",
+ f_all:"All",
+ journal_note:"Publishing template: + New Classroom Story — date, year group, lesson, what happened, student voice, teacher reflection, tags. A new story takes only minutes.",
+ moments_eyebrow:"Photographs that teach",moments_title:"Classroom Moments",moments_sub:"Every image here tells a learning story — what pupils are doing, what they are learning, and why it matters.",
+ learning_eyebrow:"For pupils & families",learning_title:"What Are We Learning Now?",learning_sub:"A simple, honest look at what each year group is working on right now.",
+ showcase_eyebrow:"Pupil work, presented with pride",showcase_title:"Student Learning Showcase",showcase_sub:"Writing, projects, presentations and creative work — shared with the permission of pupils and families.",
+ journey_eyebrow:"The year, unfolding",journey_title:"Our Learning Journey",journey_sub:"Milestones from the academic year — new ones are added as we grow.",
+ values_eyebrow:"Character in action",values_title:"King's Values in Action",values_sub:"Not a list on a wall — real classroom stories behind each value.",
+ pulse_eyebrow:"Live from our classroom",pulse_title:"Classroom Pulse",pulse_sub:"The five things animating our week — quick to read, quick to update.",
+ word_eyebrow:"A signature feature of our Arabic Department",word_title:"Arabic Word of the Week",
+ ww_label:"Word of the Week",ww_meaning:"“Freedom” — the state of being free",
+ ww_note_t:"Linguistic Note",
+ ww_note_p:"Derived from the root ح-ر-ر, which carries meanings of freedom, clarity and nobility. Related words include مُحَرَّر (freed) and حَرّ (heat — the free, open sun).",
+ expr_t:"Expression of the Week",
+ expr_p:"“Stretch your legs as far as your blanket reaches” — live within your means; one of Arabic's most beloved proverbs.",
+ beauty_t:"The Beauty of Arabic",
+ beauty_p:"The word شمس (sun) is feminine in Arabic while قمر (moon) is masculine — the opposite of many European languages. Our Year 6 pupils debated why, and their theories were wonderful.",
+ easy_update:"Easy to update each week",
+ voice_eyebrow:"In their own words",voice_title:"Student Voice",voice_sub:"Approved pupil reflections, shared with pride — first names only, always.",
+ refl_eyebrow:"Teacher's notebook",refl_title:"Weekly Reflection",
+ r1_t:"A moment that made me proud",r1_p:"A usually quiet pupil volunteered to read her story aloud — twice — because her classmates asked her to.",
+ r2_t:"Something pupils discovered",r2_p:"That Arabic calligraphy is not decoration but mathematics — geometry, proportion and rhythm working together.",
+ r3_t:"A question we're still exploring",r3_p:"“Why do some words feel beautiful before we even know what they mean?” — we will chase this in poetry next week.",
+ r4_t:"One thing to improve",r4_p:"More wait-time after questions. Great ideas need a few extra seconds to surface.",
+ proj_eyebrow:"Mini case studies",proj_title:"Our Projects",proj_sub:"Each project gets its own story: the driving question, the process, the pupil voices, the outcome.",
+ p1_t:"“Letters to Old Doha”",p1_q:"What would we write to the Doha of fifty years ago — and what would it write back?",
+ p_process:"The Process",p1_proc:"Year 5 pupils interviewed family members about old Doha, studied archive photographs, then drafted bilingual letters in Arabic and English before designing aged-paper editions with calligraphic borders.",
+ p_voice:"Student Voice",p1_voice:"“I learned that my grandfather's Doha had more sand than glass. Writing to him made history feel like a conversation, not a lesson.” — Year 5 pupil",
+ p_reflect:"Teacher Reflection",p1_ref:"The bilingual letters became the strongest writing assessment of the term — pupils chose which language carried their emotion, then translated the feeling, not just the words.",
+ ps_yg:"Year Group",ps_goals:"Learning Goals",ps_goals_v:"Bilingual writing · historical empathy · calligraphy · interview skills",
+ ps_outcome:"Final Outcome",ps_outcome_v:"A bound class anthology displayed at the term exhibition",
+ ps_next:"What Comes Next",ps_next_v:"Recording audio readings of selected letters for families",
+ cel_eyebrow:"Effort above grades",cel_title:"Celebrating Progress",cel_sub:"Reading milestones, improved drafts, personal bests and kind moments — the wins that never appear on a report card.",
+ c1_t:"Reading Milestone",c1_h:"100,000 words read",c1_p:"Our Year 6 reading circle crossed one hundred thousand words this month — celebrated with a class book spine wall.",
+ c2_t:"Improvement",c2_h:"Draft two, much braver",c2_p:"Every pupil who rewrote a first draft earned our “Brave Editor” certificate — the redraft pile was our proudest paperwork.",
+ c3_t:"Competition",c3_h:"Inter-house Calligraphy",c3_p:"Three pupils represented the school at the inter-house calligraphy finals — win or lose, their practice journeys filled a display board.",
+ cul_eyebrow:"Language, Identity & Culture",cul_title:"Where Arabic Meets Qatar",
+ cul_p1:"This is a cultural space as much as a classroom one — celebrating the Arabic language, Qatari heritage, literature and national occasions, and the cross-cultural learning that makes King's a truly international community.",
+ tag_lit:"Literature",tag_heritage:"Heritage",tag_national:"National Occasions",tag_cross:"Cross-Cultural Learning",
+ lib_eyebrow:"Everything in one place",lib_title:"Classroom Library",lib_sub:"Revision guides, worksheets, videos and extension materials — searchable in seconds.",
+ lib_ph:"Search resources — try “grammar”, “reading”, “Year 6”…",
+ fam_eyebrow:"A friendly view for home",fam_title:"Family Window",fam_sub:"Only appropriate public learning information — no grades, no personal data, just ways to share the journey.",
+ fam1_t:"How to support at home",fam1_p:"Ten minutes of Arabic conversation at dinner outperforms an hour of worksheets. Ask your child to teach you this week's word — teaching is the deepest form of learning.",
+ fam2_t:"Recommended reading",fam2_p:"This term's class library corner features folk tales from the Gulf, a bilingual poetry shelf, and our ever-growing “pupil picks” wall chosen by the readers themselves.",
+ fam3_t:"Classroom reminders",fam3_p:"Reading journals are checked on Sundays. Project exhibition invitations go home next week. As always, the official school calendar remains the source of truth for dates.",
+ about_eyebrow:"The teacher behind the stories",about_title:"My Teaching Story",
+ about_p1:"I am the Head of Arabic & Islamic at King's College Doha, teaching across the primary and secondary phases. My classroom is built on a simple conviction: language is identity, and identity deserves to be celebrated daily.",
+ about_quote:"“I believe the best classrooms are places where pupils feel safe to try, confident to question and excited to discover.”",
+ af1_t:"Subjects",af1_v:"Arabic · Islamic Studies · Qatar History",af2_t:"Year Groups",af2_v:"Years 3 – 9",
+ af3_t:"Interests",af3_v:"Calligraphy · Arabic literature · bilingual literacy",
+ af4_t:"In my classroom",af4_v:"I want every pupil to feel their language is a gift, their questions are welcome, and their progress — however quiet — is worth celebrating.",
+ appr_eyebrow:"How I teach",appr_title:"My Teaching Approach",
+ foot_role:"Head of Arabic & Islamic · King's College Doha",foot_nav:"Navigate",foot_school:"The School",
+ foot_kcd:"Official King's College Doha website ↗",
+ foot_note:"This personal classroom journal celebrates learning at King's College Doha. Official school information should always be obtained from King's College Doha.",
+ foot_made:"A living classroom journal",foot_privacy:"No pupil surnames, personal data or grades are ever published here."
+},
+ar:{
+ brand_name:"محمد حسني",brand_sub:"رئيس قسم العربية والإسلامية · كنجز كولج الدوحة",
+ nav_home:"الرئيسية",nav_journal:"يوميات الصف",nav_journey:"رحلة التعلّم",nav_showcase:"إبداعات طلابنا",nav_projects:"مشروعاتنا",nav_library:"مكتبة الصف",nav_about:"عن المعلم",
+ hero_kicker:"رئيس قسم العربية والإسلامية · كنجز كولج الدوحة",
+ hero_title:'كل يوم في صفنا قصة تعلّم <em>جديدة</em>.',
+ hero_lede:"مساحة أشارك من خلالها لحظات التعلّم، إنجازات طلابي، أفكارنا، مشروعاتنا ورحلتنا اليومية داخل كنجز كولج الدوحة.",
+ hero_cta1:"استكشف يوميات الصف",hero_cta2:"أحدث لحظات التعلّم",
+ hero_badge_t:"هذا الصف نابض بالتعلّم",hero_badge_s:"يُحدَّث أسبوعيًا بقصص جديدة",
+ week_eyebrow:"جديد من قلب الصف",week_title:"هذا الأسبوع في صفنا",week_sub:"ثلاث قصص حديثة من تعلّمنا — كتبت كما حدثت.",
+ w1_t:"حين استيقظت مفرداتنا",w1_p:"حوّل الطلاب بنك كلمات وحدتنا إلى قاموس حي، يمثّلون كل كلمة ليتخمّنها زملاؤهم — والضحك مشارك.",
+ w2_t:"صباح من التأمل والأسئلة",w2_p:"تأملنا قيمة الصدق عبر دوائر القصص، واستمرت أسئلة الطلاب في الحوار طويلًا بعد جرس الحصة.",
+ w3_t:"نرسم مدينتنا بين الماضي والحاضر",w3_p:"مقارنة صور الدوحة القديمة بأفق النوافذ أشعلت أفضل نقاش في الفصل حتى الآن.",
+ read_story:"اقرأ القصة",
+ journal_eyebrow:"قلب الموقع",journal_title:"يوميات الصف",journal_sub:"مجلة تعليمية راقية من الدروس والتأملات والاكتشافات — رشّح حسب المادة أو الصف.",
+ f_all:"الكل",
+ journal_note:"قالب النشر: + قصة صفية جديدة — التاريخ، الصف، الدرس، ماذا حدث، صوت الطالب، تأمل المعلم، الوسوم. النشر يستغرق دقائق فقط.",
+ moments_eyebrow:"صور تُعلّم",moments_title:"لحظات من الصف",moments_sub:"كل صورة هنا تحكي قصة تعلّم — ماذا يفعل الطلاب، ماذا يتعلمون، ولماذا يهم ذلك.",
+ learning_eyebrow:"للطلاب والأسر",learning_title:"ماذا نتعلم الآن؟",learning_sub:"نظرة صادقة وبسيطة على ما يعمل عليه كل صف في هذه الأيام.",
+ showcase_eyebrow:"أعمال الطلاب بكل فخر",showcase_title:"إبداعات طلابنا",showcase_sub:"كتابات ومشروعات وعروض وأعمال إبداعية — تُنشر بإذن الطلاب والأسر.",
+ journey_eyebrow:"العام الدراسي يتكشف",journey_title:"رحلة التعلّم",journey_sub:"محطات من العام الدراسي — تُضاف محطات جديدة كلما تقدمنا.",
+ values_eyebrow:"الشخصية في الممارسة",values_title:"قيم كنجز في صفنا",values_sub:"ليست قائمة على الجدار — بل قصص صفية حقيقية خلف كل قيمة.",
+ pulse_eyebrow:"مباشر من صفنا",pulse_title:"نبض الصف",pulse_sub:"خمسة أشياء تنبض بأسبوعنا — سريعة القراءة وسريعة التحديث.",
+ word_eyebrow:"بصمة قسم العربية الخاصة",word_title:"كلمة الأسبوع",
+ ww_label:"كلمة الأسبوع",ww_meaning:"«الحريّة» — حالة من لا يُقيده أحد",
+ ww_note_t:"ملاحظة لغوية",
+ ww_note_p:"من الجذر ح-ر-ر الذي يحمل معاني الحرية والجلاء والشرف. ومن كلماته: مُحرَّر وحَرّ (حرارة الشمس الساطعة بلا ستر).",
+ expr_t:"تعبير الأسبوع",
+ expr_p:"«على قد لحافك مدّ رجليك» — أحد أحب الأمثال العربية، ويعني: عِش ضمن إمكاناتك.",
+ beauty_t:"من جمال العربية",
+ beauty_p:"كلمة شمس مؤنّثة في العربية بينما قمر مذكّر — عكس كثير من اللغات الأوروبية. ناقش طلاب الصف السادس السبب، وكانت نظرياتهم رائعة.",
+ easy_update:"سهل التحديث كل أسبوع",
+ voice_eyebrow:"بكلماتهم هم",voice_title:"صوت الطالب",voice_sub:"تأملات معتمدة من الطلاب، تُنشر بفخر — الأسماء الأولى فقط، دائمًا.",
+ refl_eyebrow:"دفتر المعلم",refl_title:"وقفة الأسبوع",
+ r1_t:"لحظة أفتخر بها",r1_p:"تطوعت تلميذة هادئة عادةً بقراءة قصتها بصوت مرتفع — مرتين — لأن زملاءها طلبوا منها ذلك.",
+ r2_t:"شيء اكتشفه الطلاب",r2_p:"أن الخط العربي ليس زخرفة بل رياضيات — هندسة ونِسَب وإيقاع يعملون معًا.",
+ r3_t:"سؤال ما زلنا نستكشفه",r3_p:"«لماذا تبدو بعض الكلمات جميلة قبل أن نعرف معناها؟» — سنطارد هذا السؤال في الشعر الأسبوع القادم.",
+ r4_t:"شيء سنحسّنه",r4_p:"مهلة أطول بعد الأسئلة. الأفكار العظيمة تحتاج ثواني إضافية لتظهر.",
+ proj_eyebrow:"دراسات حالة مصغرة",proj_title:"مشروعاتنا",proj_sub:"كل مشروع له قصته: السؤال المحوري، المسيرة، أصوات الطلاب، والنتيجة.",
+ p1_t:"«رسائل إلى الدوحة القديمة»",p1_q:"ماذا سنكتب إلى دوحة قبل خمسين عامًا — وماذا ستكتب إلينا؟",
+ p_process:"المسيرة",p1_proc:"قابَل طلاب الصف الخامس أفراد عائلاتهم عن الدوحة القديمة، ودرسوا صور الأرشيف، ثم كتبوا مسودات رسائل ثنائية اللغة قبل تصميم طبعات بورق معتّق وحدود خطية.",
+ p_voice:"صوت الطالب",p1_voice:"«تعلمت أن دوحة جدي كانت فيها رمال أكثر من زجاج. كتابة الرسالة جعلت التاريخ محادثة، لا درسًا.» — طالب من الصف الخامس",
+ p_reflect:"تأمل المعلم",p1_ref:"أصبحت الرسائل ثنائية اللغة أقوى تقييم كتابي في الفصل — اختار الطلاب أي لغة تحمل شعورهم، ثم ترجموا الإحساس لا الكلمات فقط.",
+ ps_yg:"الصف",ps_goals:"أهداف التعلّم",ps_goals_v:"الكتابة ثنائية اللغة · التعاطف التاريخي · الخط · مهارات المقابلة",
+ ps_outcome:"النتيجة النهائية",ps_outcome_v:"مجلد صفي مُجلَّد عُرض في معرض الفصل",
+ ps_next:"الخطوة القادمة",ps_next_v:"تسجيل قراءات صوتية لرسائل مختارة للأسر",
+ cel_eyebrow:"الجهد قبل الدرجات",cel_title:"نحتفل بالتقدم",cel_sub:"محطات قراءة، مسودات محسّنة، أفضل إنجاز شخصي ولحظات لطف — انتصارات لا تظهر في كشوف الدرجات.",
+ c1_t:"محطة قراءة",c1_h:"مئة ألف كلمة مقروءة",c1_p:"تجاوزت دائرة قراءة الصف السادس مئة ألف كلمة هذا الشهر — واحتفلنا بجدار عناوين الكتب.",
+ c2_t:"تحسّن",c2_h:"المسودة الثانية أشجع",c2_p:"كل طالب أعاد كتابة مسودته الأولى نال شهادة «محرر شجاع» — كانت أكوام المسودات أبهج أوراقنا.",
+ c3_t:"مسابقة",c3_h:"نهائيات الخط بين البيوت",c3_p:"ثلاثة طلاب مثّلوا المدرسة في نهائيات الخط بين البيوت — رابحين أم لا، فإن رحلات تدريبهم ملأت لوحة العرض.",
+ cul_eyebrow:"لغة وهوية وثقافة",cul_title:"حيث تلتقي العربية بقطر",
+ cul_p1:"هذه مساحة ثقافية بقدر ما هي صفية — نحتفي باللغة العربية والتراث القطري والأدب والمناسبات الوطنية، وبالتعلّم بين الثقافات الذي يجعل كنجز مجتمعًا دوليًا حقًا.",
+ tag_lit:"الأدب",tag_heritage:"التراث",tag_national:"المناسبات الوطنية",tag_cross:"التعلّم بين الثقافات",
+ lib_eyebrow:"كل شيء في مكان واحد",lib_title:"مكتبة الصف",lib_sub:"أدلة مراجعة وأوراق عمل وفيديوهات ومواد إثرائية — ابحث في ثوانٍ.",
+ lib_ph:"ابحث في الموارد — جرّب «قواعد» أو «قراءة» أو «الصف السادس»…",
+ fam_eyebrow:"نافذة ودّية للبيت",fam_title:"نافذة الأسرة",fam_sub:"معلومات تعلّم عامة مناسبة فقط — لا درجات ولا بيانات شخصية، فقط طرق للمشاركة في الرحلة.",
+ fam1_t:"كيف تدعمون في البيت",fam1_p:"عشر دقائق من الحوار بالعربية على العشاء أفضل من ساعة من أوراق العمل. اطلبوا من ابنكم أن يعلّمكم كلمة الأسبوع — فالتعليم أعمق أشكال التعلّم.",
+ fam2_t:"قراءات موصى بها",fam2_p:"تضم ركن مكتبة الفصل هذا الفصل حكايات شعبية خليجية ورف شعر ثنائي اللغة وجدار «اختيارات القرّاء» الذي يختاره القرّاء أنفسهم.",
+ fam3_t:"تذكيرات الصف",fam3_p:"تُراجع دفاتر القراءة أيام الأحد. دعوات معرض المشروعات تُرسل للبيوت الأسبوع القادم. وكما هو دائمًا، التقويم المدرسي الرسمي هو المرجع للمواعيد.",
+ about_eyebrow:"المعلم خلف القصص",about_title:"قصتي مع التعليم",
+ about_p1:"أنا رئيس قسم العربية والإسلامية في كنجز كولج الدوحة، أدرّس في المرحلتين الابتدائية والإعدادية. صفي مبني على قناعة بسيطة: اللغة هي الهوية، والهوية تستحق الاحتفاء يوميًا.",
+ about_quote:"«أؤمن أن أفضل الصفوف هي التي يشعر فيها الطالب بالأمان ليحاول، وبالثقة ليسأل، وبالحماس ليكتشف.»",
+ af1_t:"المواد",af1_v:"اللغة العربية · الدراسات الإسلامية · تاريخ قطر",af2_t:"الصفوف",af2_v:"من الصف الثالث إلى التاسع",
+ af3_t:"اهتماماتي",af3_v:"الخط العربي · الأدب العربي · محو الأمية ثنائية اللغة",
+ af4_t:"في صفي",af4_v:"أريد لكل طالب أن يشعر أن لغته هدية، وأن أسئلته مرحّب بها، وأن تقدّمه — حتى لو كان هادئًا — يستحق الاحتفاء.",
+ appr_eyebrow:"كيف أُعلّم",appr_title:"نهجي في التعليم",
+ foot_role:"رئيس قسم العربية والإسلامية · كنجز كولج الدوحة",foot_nav:"تصفح",foot_school:"المدرسة",
+ foot_kcd:"الموقع الرسمي لكنجز كولج الدوحة ↗",
+ foot_note:"هذه المساحة توثق وتحتفي بتجارب التعلّم داخل كنجز كولج الدوحة. وللمعلومات الرسمية يرجى الرجوع إلى قنوات المدرسة الرسمية.",
+ foot_made:"يوميات صفية حيّة",foot_privacy:"لا تُنشر هنا أسماء عائلات الطلاب ولا بياناتهم الشخصية ولا درجاتهم أبدًا."
+}};
+
+/* ================= DYNAMIC CONTENT (bilingual) ================= */
+const CONTENT = {
+journal:[
+ {f:"arabic writing",yg:"Y5",cls:"5B",subj:"العربية",seed:"j1",en:{t:"The Living Dictionary",p:"We turned our word bank into a performance — every vocabulary word acted, sketched and defined by pupils themselves."},ar:{t:"القاموس الحي",p:"حوّلنا بنك الكلمات إلى أداء — كل كلبة تُمثَّل وتُرسَم وتُعرَّف بأيدي الطلاب أنفسهم."}},
+ {f:"qatar culture",yg:"Y4",cls:"4C",subj:"Qatar History",seed:"j2",en:{t:"Old Doha, New Eyes",p:"Archive photographs met modern skylines as pupils built past-and-present maps of their own neighbourhoods."},ar:{t:"الدوحة القديمة بعيون جديدة",p:"التقت صور الأرشيف بأفق اليوم حين بنى الطلاب خرائط لأحيائهم بين الماضي والحاضر."}},
+ {f:"reading",yg:"Y6",cls:"6A",subj:"Reading",seed:"j3",en:{t:"A Chapter a Day, a World a Week",p:"Our silent reading ritual grew into book talks — pupils now pitch their novels to the class in sixty seconds."},ar:{t:"فصل كل يوم، وعالم كل أسبوع",p:"نما طقس القراءة الصامتة إلى محادثات كتب — يعرض الطلاب رواياتهم على الصف في ستين ثانية."}},
+ {f:"islamic",yg:"Y5",cls:"5A",subj:"Islamic Studies",seed:"j4",en:{t:"Stories of Honesty",p:"Story circles on truthfulness produced questions so thoughtful we dedicated a second lesson just to them."},ar:{t:"قصص الصدق",p:"دوائر قصص عن الصدق أنتجت أسئلة عميقة جعلتنا نخصص درسًا ثانيًا لها وحدها."}},
+ {f:"speaking projects",yg:"Y7",cls:"7B",subj:"Arabic",seed:"j5",en:{t:"Sixty Seconds of Confidence",p:"Pupils rehearsed, recorded and re-recorded short Arabic talks — the second take was always braver than the first."},ar:{t:"ستون ثانية من الثقة",p:"تدرب الطلاب وسجلوا وأعادوا تسجيل حديث عربي قصير — كانت المحاولة الثانية أشجع دائمًا."}},
+ {f:"writing celebrations",yg:"Y6",cls:"6C",subj:"Writing",seed:"j6",en:{t:"Poetry Under the Corridor Lights",p:"Our term celebration featured pupils reading original Arabic poetry to families in the corridor gallery."},ar:{t:"شعر تحت أضواء الممر",p:"تضمنت احتفالية الفصل قراءات للشعر العربي الأصلي بأصوات الطلاب أمام الأسر في معرض الممر."}}
+],
+moments:[
+ {seed:"m1",en:{t:"Measuring the Medina",p:"Pupils pace out a scale model of an old souq — learning ratio by walking through it."},ar:{t:"نقيس المدينة القديمة",p:"يقيس الطلاب مجسمًا مصغرًا للسوق القديم — يتعلمون النِّسَب بالمشي داخله."}},
+ {seed:"m2",en:{t:"The Red Pen Roundtable",p:"Peer feedback in action: pupils trade drafts and learn to give kind, specific advice."},ar:{t:"طاولة القلم الأحمر",p:"تقييم الأقران عمليًا: يتبادل الطلاب مسوداتهم ويتعلمون نصائح لطيفة ومحددة."}},
+ {seed:"m3",en:{t:"Calligraphy in Concentration",p:"Ink, breath, patience — the quietest and most focused ten minutes of our week."},ar:{t:"خط بتركيز",p:"حبر ونفس وصبر — أكثر عشر دقائق هدوءًا وتركيزًا في أسبوعنا."}},
+ {seed:"m4",en:{t:"Question Storm",p:"A single provocation generated forty pupil questions — we pinned them all to the wonder wall."},ar:{t:"عاصفة الأسئلة",p:"سؤال محفّز واحد أنشأ أربعين سؤالًا من الطلاب — علّقناها كلها على جدار الفضول."}},
+ {seed:"m5",en:{t:"Reading Buddies",p:"Year 6 readers pair with Year 3 — both sides grow, and nobody wants to stop."},ar:{t:"رفيق القراءة",p:"قرّاء الصف السادس مع الصف الثالث — يكبر الطرفان، ولا يريد أحد التوقف."}},
+ {seed:"m6",en:{t:"Doha Then and Now",p:"Comparing archive photos with today's skyline turned history into a live debate."},ar:{t:"الدوحة زمان والآن",p:"مقارنة صور الأرشيف بأفق اليوم حوّلت التاريخ إلى نقاش حي."}}
+],
+learning:[
+ {yg_en:"Year 4 · Arabic",yg_ar:"الصف الرابع · العربية",seed:"l1",
+  en:{u:"Describing Our World",q:"How can adjectives paint a picture?",v:"colours, sizes, feelings",s:"speaking in full sentences",c:"describing a classmate without naming them",n:"moving from sentences to short paragraphs"},
+  ar:{u:"نصف عالمنا",q:"كيف ترسم الصفات صورة؟",v:"الألوان والأحجام والمشاعر",s:"التحدث بجمل كاملة",c:"وصف زميل دون ذكر اسمه",n:"من الجمل إلى فقرات قصيرة"}},
+ {yg_en:"Year 5 · Islamic Studies",yg_ar:"الصف الخامس · الدراسات الإسلامية",seed:"l2",
+  en:{u:"Values in Daily Life",q:"What does honesty look like on an ordinary Tuesday?",v:"trust, truthfulness, responsibility",s:"connecting values to real choices",c:"a values dilemma drama",n:"pupil-written value stories"},
+  ar:{u:"القيم في الحياة اليومية",q:"كيف يبدو الصدق في يوم عادي؟",v:"الأمانة والصدق والمسؤولية",s:"ربط القيم بخيارات حقيقية",c:"مسرحية معضلة قيمية",n:"قصص قيم بأقلام الطلاب"}},
+ {yg_en:"Year 6 · Qatar History",yg_ar:"الصف السادس · تاريخ قطر",seed:"l3",
+  en:{u:"The Pearl Divers' Coast",q:"How did the sea shape our city before oil?",v:"dhow, pearl, souq, majlis",s:"reading photographs as sources",c:"weaving an interview into a story",n:"presenting family histories"},
+  ar:{u:"ساحل الغوّاصين",q:"كيف شكّل البحر مدينتنا قبل النفط؟",v:"الداو واللؤلؤ والسوق والمجلس",s:"قراءة الصور كمصادر",c:"نسج مقابلة في قصة",n:"عرض تواريخ الأسر"}}
+],
+showcase:[
+ {cat_en:"Writing",cat_ar:"كتابة",seed:"s1",en:{t:"A Letter to My City",m:"Year 5 · bilingual letter project"},ar:{t:"رسالة إلى مدينتي",m:"الصف الخامس · مشروع الرسائل ثنائية اللغة"}},
+ {cat_en:"Projects",cat_ar:"مشروعات",seed:"s2",en:{t:"Souq in a Shoebox",m:"Year 4 · miniature heritage souq"},ar:{t:"سوق في علبة أحذية",m:"الصف الرابع · نموذج تراثي مصغّر"}},
+ {cat_en:"Creative Work",cat_ar:"عمل إبداعي",seed:"s3",en:{t:"Calligraphy: My Name in Thuluth",m:"Year 6 · first ink commission"},ar:{t:"خطّي: اسمي بالثلث",m:"الصف السادس · أول عمل بالحبر"}},
+ {cat_en:"Speaking",cat_ar:"تحدث",seed:"s4",en:{t:"Sixty-Second Book Talk",m:"Year 6 · reading circle finale"},ar:{t:"عرض كتاب في ستين ثانية",m:"الصف السادس · ختام دائرة القراءة"}},
+ {cat_en:"Research",cat_ar:"بحث",seed:"s5",en:{t:"My Grandmother's Doha",m:"Year 5 · oral history research"},ar:{t:"دوحة جدتي",m:"الصف الخامس · بحث تاريخ شفهي"}},
+ {cat_en:"Culture",cat_ar:"ثقافة",seed:"s6",en:{t:"National Day Poster, Arabic & English",m:"Year 4 · cross-cultural design"},ar:{t:"ملصق اليوم الوطني بالعربية والإنجليزية",m:"الصف الرابع · تصميم بين الثقافات"}},
+ {cat_en:"Reading",cat_ar:"قراءة",seed:"s7",en:{t:"Reading Passport: 25 Stamps",m:"Year 3 · genre exploration"},ar:{t:"جواز قراءة: ٢٥ ختمة",m:"الصف الثالث · استكشاف الأنواع"}},
+ {cat_en:"Presentations",cat_ar:"عروض",seed:"s8",en:{t:"Inventor of the Islamic Golden Age",m:"Year 7 · research presentation"},ar:{t:"مخترع من العصر الذهبي الإسلامي",m:"الصف السابع · عرض بحثي"}}
+],
+timeline:[
+ {m_en:"September",m_ar:"سبتمبر",en:{t:"Beginning Our Journey",p:"Routines, rituals and the first entries in our reading journals."},ar:{t:"بداية رحلتنا",p:"عادات وطقوس وأولى التدوينات في دفاتر القراءة."}},
+ {m_en:"October",m_ar:"أكتوبر",en:{t:"First Projects Launch",p:"Driving questions go live; the wonder wall fills with pupil questions."},ar:{t:"انطلاق أول المشروعات",p:"تُطرح الأسئلة المحورية؛ ويمتلئ جدار الفضول بأسئلة الطلاب."}},
+ {m_en:"November",m_ar:"نوفمبر",en:{t:"Reading Challenge",p:"The whole-phase reading race begins — passports at the ready."},ar:{t:"تحدي القراءة",p:"يبدأ سباق القراءة للمرحلة — والجوازات في الجيوب."}},
+ {m_en:"December",m_ar:"ديسمبر",en:{t:"Term Reflection",p:"We pause, look back at our first term, and publish our reflections."},ar:{t:"تأمل الفصل الدراسي",p:"نتوقف وننظر إلى الفصل الأول وننشر تأملاتنا."}}
+],
+values:[
+ {icon:"🎤",en:{n:"Confident",d:"Pupils deliver Arabic presentations to real audiences.",e:"This week: a pupil re-recorded her talk — unprompted — until it felt right."},ar:{n:"واثق",d:"يقدّم الطلاب عروضًا بالعربية أمام جمهور حقيقي.",e:"هذا الأسبوع: أعادت تلميذة تسجيل حديثها — من تلقاء نفسها — حتى اقتنعت به."}},
+ {icon:"🔍",en:{n:"Curious",d:"Pupils chase the origin and meaning of Arabic words.",e:"A question about why شمس is feminine consumed a whole lesson."},ar:{n:"فضولي",d:"يلاحق الطلاب أصول الكلمات العربية ومعانيها.",e:"سؤال عن مؤنث شمس استهلك درسًا كاملًا."}},
+ {icon:"🎨",en:{n:"Creative",d:"Original stories, calligraphy commissions and project designs.",e:"The shoebox souqs are now a permanent gallery in the corridor."},ar:{n:"مبدع",d:"قصص أصلية وطلاءات خطية وتصاميم مشروعات.",e:"أصبحت أسواق علب الأحذية معرضًا دائمًا في الممر."}},
+ {icon:"💪",en:{n:"Committed",d:"Improving work after feedback, then improving it again.",e:"Draft two is a badge of honour in this classroom."},ar:{n:"ملتزم",d:"تحسين العمل بعد التغذية الراجعة، ثم تحسينه مجددًا.",e:"المسودة الثانية وسام شرف في هذا الصف."}},
+ {icon:"🤝",en:{n:"Caring",d:"Pupils support one another's reading, writing and confidence.",e:"Reading buddies: older pupils who won't let younger ones give up."},ar:{n:"حنون",d:"يدعم الطلاب قراءة بعضهم وكتابتهم وثقتهم ببعض.",e:"رفيق القراءة: طلاب أكبر يرفضون استسلام الأصغر."}}
+],
+pulse:[
+ {l_en:"Currently Learning",l_ar:"نتعلم الآن",b_en:"Bilingual letter writing — saying it once in Arabic, again in English",s_en:"Year 5 · Unit 4",b_ar:"كتابة الرسائل ثنائية اللغة — نقولها مرة بالعربية ومرة بالإنجليزية",s_ar:"الصف الخامس · الوحدة ٤"},
+ {l_en:"Currently Reading",l_ar:"نقرأ الآن",b_en:"Gulf folk tales — a different tale every morning",s_en:"Class read-aloud",b_ar:"حكايات خليجية — قصة جديدة كل صباح",s_ar:"قراءة جماعية صباحية"},
+ {l_en:"Question of the Week",l_ar:"سؤال الأسبوع",b_en:"“Can a word be beautiful before we know its meaning?”",s_en:"Worth a whole lesson",b_ar:"«هل يمكن أن تكون الكلمة جميلة قبل أن نعرف معناها؟»",s_ar:"يستحق درسًا كاملًا"},
+ {l_en:"Word of the Week",l_ar:"كلمة الأسبوع",b_en:"حُرِّيَّة — freedom",s_en:"See the feature below",b_ar:"حُرِّيَّة — freedom",s_ar:"انظر البطاقة أدناه"},
+ {l_en:"Challenge of the Week",l_ar:"تحدي الأسبوع",b_en:"Describe your breakfast in Arabic without using the word “ate”",s_en:"Bonus points for poetry",b_ar:"صف فطورك بالعربية دون استخدام كلمة «أكل»",s_ar:"نقاط إضافية للشعر"}
+],
+voice:[
+ {p_en:"Something I learned",q_en:"That my grandfather's Doha had more sea than roads — and that history can be a letter, not a lesson.",w_en:"Year 5 pupil · Letters to Old Doha"},
+ {p_en:"A challenge I overcame",q_en:"Reading my poem out loud. My hands shook on the first line. By the last line, I didn't want to stop.",w_en:"Year 6 pupil · Poetry celebration"},
+ {p_en:"Something I am proud of",q_en:"My calligraphy piece took five tries. The fifth one is on the wall now. So are tries one to four — my teacher framed the journey.",w_en:"Year 6 pupil · Calligraphy unit"},
+ {p_en:"My next goal",q_en:"To read one whole Arabic novel before the winter break. I have chosen it already. It is thick. I am not scared.",w_en:"Year 7 pupil · Reading circle"}
+],
+approach:[
+ {en:{t:"Active Learning",p:"Pupils do the thinking: acting, building, debating, teaching."},ar:{t:"التعلم النشط",p:"الطلاب يفكرون: يمثلون ويبنون ويناقشون ويُعلّمون."}},
+ {en:{t:"Student Voice",p:"Questions steer the lesson as much as plans do."},ar:{t:"صوت الطالب",p:"الأسئلة توجّه الدرس بقدر ما توجّهه الخطط."}},
+ {en:{t:"Challenge",p:"Every pupil works at the edge of comfortable."},ar:{t:"التحدي",p:"كل طالب يعمل عند حافة منطقة الراحة."}},
+ {en:{t:"Creativity",p:"Original work over worksheets, always."},ar:{t:"الإبداع",p:"العمل الأصلي قبل أوراق العمل، دائمًا."}},
+ {en:{t:"Feedback",p:"Kind, specific, actionable — and always followed by a redraft."},ar:{t:"التغذية الراجعة",p:"لطيفة ومحددة وقابلة للتنفيذ — وتتبعها إعادة كتابة دائمًا."}},
+ {en:{t:"Collaboration",p:"We learn in circles, not rows."},ar:{t:"التعاون",p:"نتعلم في دوائر لا في صفوف."}},
+ {en:{t:"Independent Learning",p:"Journals, choices and self-set goals grow ownership."},ar:{t:"التعلم المستقل",p:"الدفاتر والخيارات والأهداف الذاتية تصنع الملكية."}},
+ {en:{t:"Cultural Identity",p:"Arabic is celebrated here as a living treasure."},ar:{t:"الهوية الثقافية",p:"تُحتفى العربية هنا ككنز حي."}}
+],
+resources:[
+ {icon:"📄",cls:"f-pdf",t_en:"Year 5 Revision Guide — Unit 4",s_en:"PDF · Arabic · Revision",t_ar:"دليل مراجعة الصف الخامس — الوحدة ٤",s_ar:"PDF · العربية · مراجعة"},
+ {icon:"📝",cls:"f-doc",t_en:"Story Mountain Worksheet",s_en:"Word · Writing · Years 4–6",t_ar:"ورقة قصة الجبل",s_ar:"Word · كتابة · الصفوف ٤–٦"},
+ {icon:"📊",cls:"f-ppt",t_en:"Introduction to Thuluth Script",s_en:"PowerPoint · Calligraphy",t_ar:"مدخل إلى الخط الثلث",s_ar:"PowerPoint · خط"},
+ {icon:"🎬",cls:"f-vid",t_en:"How Pearl Divers Worked",s_en:"Video · Qatar History",t_ar:"كيف عمل الغوّاصون",s_ar:"فيديو · تاريخ قطر"},
+ {icon:"🔗",cls:"f-link",t_en:"Arabic Children's Literature Shelf",s_en:"Link · Reading · Extension",t_ar:"رف أدب الطفل العربي",s_ar:"رابط · قراءة · إثراء"},
+ {icon:"📄",cls:"f-pdf",t_en:"Exam Preparation Checklist",s_en:"PDF · Year 6 · Exam Prep",t_ar:"قائمة تحضير الامتحانات",s_ar:"PDF · الصف السادس · تحضير الامتحان"}
+]};
+
+/* ================= RENDERERS ================= */
+let LANG = 'en';
+const isAr = () => LANG === 'ar';
+const T = k => (I18N[LANG] && I18N[LANG][k]) || I18N.en[k] || k;
+
+function renderAll(){
+  // i18n static
+  document.querySelectorAll('[data-i18n]').forEach(el=>{ el.innerHTML = T(el.dataset.i18n); });
+  document.querySelectorAll('[data-i18n-ph]').forEach(el=>{ el.placeholder = T(el.dataset.i18nPh); });
+  document.querySelectorAll('#langLabel,#langLabel2').forEach(el=>{ el.textContent = LANG==='en' ? 'العربية' : 'English'; });
+  document.documentElement.lang = LANG;
+  document.documentElement.dir = isAr() ? 'rtl' : 'ltr';
+  document.title = isAr() ? 'محمد حسني | يومياتي الصفية في كنجز' : "Mohamed Hosny | My Classroom at King's";
+  renderJournal(); renderMoments(); renderLearning(); renderShowcase(); renderTimeline();
+  renderValues(); renderPulse(); renderVoice(); renderApproach(); renderResources();
+}
+
+/* Journal */
+let activeFilter='all';
+function renderJournal(){
+  const grid=document.getElementById('journalGrid');
+  const items=CONTENT.journal.filter(j=>activeFilter==='all'||j.f.split(' ').includes(activeFilter));
+  grid.innerHTML=items.map(j=>`
+   <article class="card">
+    <div class="thumb"><img src="https://picsum.photos/seed/kcd${j.seed}/700/480" alt="" loading="lazy"></div>
+    <div class="body">
+      <div class="meta-row"><span class="chip blue">${j.yg}</span><span class="chip">${j.cls}</span><span class="chip teal">${j.subj}</span></div>
+      <h3>${isAr()?j.ar.t:j.en.t}</h3>
+      <p>${isAr()?j.ar.p:j.en.p}</p>
+      <a href="#journal" class="read">${T('read_story')}</a>
+    </div>
+   </article>`).join('');
+}
+document.getElementById('journalFilters').addEventListener('click',e=>{
+  const b=e.target.closest('.filter-btn'); if(!b) return;
+  activeFilter=b.dataset.f;
+  document.querySelectorAll('#journalFilters .filter-btn').forEach(x=>x.classList.toggle('active',x===b));
+  renderJournal();
+});
+
+function renderMoments(){
+  document.getElementById('momentsGrid').innerHTML=CONTENT.moments.map(m=>`
+   <div class="moment reveal in">
+     <img src="https://picsum.photos/seed/kcd${m.seed}/600/480" alt="" loading="lazy">
+     <div class="cap"><h4>${isAr()?m.ar.t:m.en.t}</h4><p>${isAr()?m.ar.p:m.en.p}</p></div>
+   </div>`).join('');
+}
+const row=(b,v)=>`<div class="row"><b>${b}</b><span>${v}</span></div>`;
+function renderLearning(){
+  document.getElementById('learningGrid').innerHTML=CONTENT.learning.map(l=>{
+    const d=isAr()?l.ar:l.en;
+    return `<div class="learning-card reveal in">
+      <div class="yg">${isAr()?l.yg_ar:l.yg_en}</div>
+      <h3>${d.u}</h3>
+      <dl>
+        ${row(isAr()?'السؤال الكبير':'Big Question',d.q)}
+        ${row(isAr()?'مفردات أساسية':'Key Vocabulary',d.v)}
+        ${row(isAr()?'المهارات':'Skills',d.s)}
+        ${row(isAr()?'التحدي الحالي':'Current Challenge',d.c)}
+        ${row(isAr()?'ما التالي':'What Comes Next',d.n)}
+      </dl></div>`;}).join('');
+}
+function renderShowcase(){
+  document.getElementById('showcaseGrid').innerHTML=CONTENT.showcase.map(s=>`
+   <div class="showcase-item reveal in">
+     <img src="https://picsum.photos/seed/kcd${s.seed}/500/440" alt="" loading="lazy">
+     <div class="info"><div class="cat">${isAr()?s.cat_ar:s.cat_en}</div><h4>${isAr()?s.ar.t:s.en.t}</h4><p>${isAr()?s.ar.m:s.en.m}</p></div>
+   </div>`).join('');
+}
+function renderTimeline(){
+  document.getElementById('timeline').innerHTML=CONTENT.timeline.map(t=>`
+   <div class="t-item reveal in"><div class="month">${isAr()?t.m_ar:t.m_en}</div><h3>${isAr()?t.ar.t:t.en.t}</h3><p>${isAr()?t.ar.p:t.en.p}</p></div>`).join('');
+}
+function renderValues(){
+  document.getElementById('valuesGrid').innerHTML=CONTENT.values.map(v=>`
+   <div class="value-card reveal in"><div class="icon">${v.icon}</div><h3>${isAr()?v.ar.n:v.en.n}</h3><p>${isAr()?v.ar.d:v.en.d}</p><div class="evidence">${isAr()?v.ar.e:v.en.e}</div></div>`).join('');
+}
+function renderPulse(){
+  document.getElementById('pulseGrid').innerHTML=CONTENT.pulse.map(p=>`
+   <div class="pulse-card reveal in"><div class="label">● ${isAr()?p.l_ar:p.l_en}</div><div class="big">${isAr()?p.b_ar:p.b_en}</div><div class="small">${isAr()?p.s_ar:p.s_en}</div><span class="update-tag">${T('easy_update')}</span></div>`).join('');
+}
+function renderVoice(){
+  const prompts=isAr()?['تعلمت اليوم','تحدٍ تغلبت عليه','أنا فخور بـ','خطوتي القادمة']:null;
+  document.getElementById('voiceGrid').innerHTML=CONTENT.voice.map((v,i)=>`
+   <div class="voice-card reveal in"><span class="mark">”</span>
+     <div class="prompt">${prompts?prompts[i]:v.p_en}</div>
+     <q>${isAr()?[v.arq1,v.arq2,v.arq3,v.arq4][i]:v.q_en}</q>
+     <div class="who">${isAr()?['طالب من الصف الخامس','طالبة من الصف السادس','طالب من الصف السادس','طالب من الصف السابع'][i]:v.w_en}</div>
+   </div>`).join('');
+}
+function renderApproach(){
+  document.getElementById('approachGrid').innerHTML=CONTENT.approach.map((a,i)=>`
+   <div class="approach-card reveal in"><div class="n">${String(i+1).padStart(2,'0')}</div><h4>${isAr()?a.ar.t:a.en.t}</h4><p>${isAr()?a.ar.p:a.en.p}</p></div>`).join('');
+}
+function renderResources(){
+  document.getElementById('resList').innerHTML=CONTENT.resources.map(r=>`
+   <div class="res-item reveal in"><div class="ficon ${r.cls}">${r.icon}</div>
+     <div><b>${isAr()?r.t_ar:r.t_en}</b><span>${isAr()?r.s_ar:r.s_en}</span></div></div>`).join('');
+}
+
+/* Voice Arabic quotes */
+CONTENT.voice[0].arq1="أن دوحة جدي كانت فيها البحر أكثر من الطرق — وأن التاريخ يمكن أن يكون رسالة، لا درسًا.";
+CONTENT.voice[1].arq2="قراءة قصيدتي بصوت مرتفع. ارتجفت يداي في السطر الأول. وعند السطر الأخير، لم أرد أن أتوقف.";
+CONTENT.voice[2].arq3="قطعة خطّي استغرقت خمس محاولات. المحاولة الخامسة على الجدار الآن. والمحاولات من واحد إلى أربعة أيضًا — فقد أطّر المعلم الرحلة كاملة.";
+CONTENT.voice[3].arq4="أن أقرأ رواية عربية كاملة قبل إجازة الشتاء. اخترتها بالفعل. إنها سميكة. وأنا لست خائفًا.";
+
+/* Search (visual) */
+document.getElementById('libSearch').addEventListener('input',e=>{
+  const q=e.target.value.toLowerCase();
+  document.querySelectorAll('.res-item').forEach(el=>{
+    el.style.display = el.textContent.toLowerCase().includes(q) ? 'flex':'none';
+  });
+});
+
+/* Language toggle */
+function toggleLang(){ LANG = isAr()?'en':'ar'; renderAll(); }
+document.getElementById('langToggle').addEventListener('click',toggleLang);
+document.getElementById('langToggle2').addEventListener('click',toggleLang);
+
+/* Mobile menu */
+const navLinks=document.getElementById('navLinks');
+document.getElementById('menuBtn').addEventListener('click',()=>navLinks.classList.toggle('open'));
+navLinks.addEventListener('click',e=>{ if(e.target.tagName==='A') navLinks.classList.remove('open'); });
+
+/* Reveal on scroll */
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.08});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+
+renderAll();
+</script>
+</body>
+</html>
